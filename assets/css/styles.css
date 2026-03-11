@@ -1,9 +1,8 @@
-body {
-  background-color: powderblue;
-}
 h1 {
-  color: blue;
+    color: green;
+    font-size: 40px;
 }
+
 p {
-  color: red;
+    color: teal;
 }
