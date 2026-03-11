@@ -1,5 +1,9 @@
+body {
+    background-color: mediumpurple;
+}
+
 h1 {
-    color: orange;
+    color: pink;
     font-size: 40px;
 }
 
