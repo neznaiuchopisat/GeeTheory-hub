@@ -1,5 +1,5 @@
 body {
-    background-color: darkslategray;
+    background-color: #011f00;
 }
 
 h1 {
@@ -7,15 +7,74 @@ h1 {
     font-size: 40px;
 }
 
-p {
-    color: dimgrey;
+h3 {
 
+    color: #03BC00;
+    
+}
+
+h4{
+
+    color: #653366;
+
+}
+
+ul, ol{
+
+    color:#5e315f;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+footer{
+
+    color: #A05450;
+
+}
+
+p {
+
+    color: #4A9249;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+table {
+
+    color: #AB0900;
+    font-family: 'Montserrat', sans-serif;
+    
 }
 
 .navbar {
 
-    background-color: darkseagreen;
+    background-color: #141f14;
     font-size: 20px;
     color: black;
 
 }
+
+a {
+
+    color: #03BC00
+
+}
+
+.gabriela-regular {
+    font-family: "Gabriela", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.montserrat-regular {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+  
+
+* {
+    font-family: Gabriela;
+
+    
+ }
