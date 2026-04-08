@@ -15,13 +15,13 @@ h3 {
 
 h4{
 
-    color: #653366;
+    color: #7c4f8f;
 
 }
 
 ul, ol{
 
-    color:#5e315f;
+    color: #9a78b3;
     font-family: 'Montserrat', sans-serif;
 
 }
@@ -46,6 +46,23 @@ table {
     
 }
 
+.contrast-table {
+    background-color: #102b11;
+    color: #c8e0c8;
+    border-color: #1f5b25;
+}
+
+.contrast-table th,
+.contrast-table td {
+    border-color: #1f5b25;
+}
+
+.contrast-table thead,
+.contrast-table tfoot {
+    background-color: #174219;
+    color: #e2f2de;
+}
+
 .navbar {
 
     background-color: #141f14;
@@ -56,7 +73,7 @@ table {
 
 a {
 
-    color: #03BC00
+    color: #ffffff
 
 }
 
