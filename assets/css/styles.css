@@ -19,6 +19,23 @@ h4{
 
 }
 
+article h4 {
+    color: #8a9e73;
+}
+
+article ul,
+article ol {
+    color: #9fb98c;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 1rem;
+}
+
+article ul li,
+article ol li {
+    color: #c7d7b8;
+    margin-bottom: 0.35rem;
+}
+
 ul, ol{
 
     color: #9a78b3;
@@ -37,6 +54,13 @@ p {
     color: #4A9249;
     font-family: 'Montserrat', sans-serif;
 
+}
+
+mark {
+    background-color: #94b4a1;
+    color: #044b14;
+    padding: 0 0.2em;
+    border-radius: 0.2em;
 }
 
 table {
@@ -73,7 +97,7 @@ table {
 
 a {
 
-    color: #ffffff
+    color: #89a47d;
 
 }
 
