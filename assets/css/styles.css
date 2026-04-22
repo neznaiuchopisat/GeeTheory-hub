@@ -1,38 +1,38 @@
 body {
-    background-color: #011f00;
+    background-color: #372B5B;
 }
 
 h1 {
-    color: green;
+    color: #6EEB77;
     font-size: 40px;
 }
 
 h3 {
 
-    color: #03BC00;
+    color: #ffc092;
     
 }
 
 h4{
 
-    color: #7c4f8f;
+    color: #b28b4d;
 
 }
 
 article h4 {
-    color: #8a9e73;
+    color: #ffd09a;
 }
 
 article ul,
 article ol {
-    color: #9fb98c;
+    color: #E8975D;
     font-family: 'Montserrat', sans-serif;
     margin-left: 1rem;
 }
 
 article ul li,
 article ol li {
-    color: #c7d7b8;
+    color: #EBA96E;
     margin-bottom: 0.35rem;
 }
 
@@ -45,20 +45,20 @@ ul, ol{
 
 footer{
 
-    color: #A05450;
+    color: #936a47;
 
 }
 
 p {
 
-    color: #4A9249;
+    color: #EBA96E;
     font-family: 'Montserrat', sans-serif;
 
 }
 
 mark {
-    background-color: #94b4a1;
-    color: #044b14;
+    background-color: #6f5fca;
+    color: #ffbc6a;
     padding: 0 0.2em;
     border-radius: 0.2em;
 }
@@ -70,26 +70,15 @@ table {
     
 }
 
-.contrast-table {
-    background-color: #102b11;
-    color: #c8e0c8;
-    border-color: #1f5b25;
-}
-
 .contrast-table th,
 .contrast-table td {
-    border-color: #1f5b25;
-}
-
-.contrast-table thead,
-.contrast-table tfoot {
-    background-color: #174219;
-    color: #e2f2de;
+    border-color: #45924B;
+    color: #66d76f
 }
 
 .navbar {
 
-    background-color: #0c2e0c;
+    background-color: #493979;
     font-size: 20px;
     color: black;
 
@@ -97,7 +86,7 @@ table {
 
 a {
 
-    color: #5ba460 !important;
+    color: #ffe0c5 !important;
 
 }
 
