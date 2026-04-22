@@ -89,7 +89,7 @@ table {
 
 .navbar {
 
-    background-color: #141f14;
+    background-color: #0c2e0c;
     font-size: 20px;
     color: black;
 
@@ -97,7 +97,7 @@ table {
 
 a {
 
-    color: #816594 !important;
+    color: #5ba460 !important;
 
 }
 
@@ -119,3 +119,9 @@ a {
 
     
  }
+
+/* Dropdown menu positioning */
+.dropdown-menu {
+    margin-top: 0 !important;
+    top: 100% !important;
+}
