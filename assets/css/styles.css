@@ -121,11 +121,35 @@ table {
 }
 
 .navbar {
-
     background-color: #221F33;
     font-size: 1.25rem;
     color: black;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 1.25rem;
+    animation: navbarGlow 3s ease-in-out infinite;
+    transition: all 0.5s ease;
+}
 
+.navbar .container-fluid {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.navbar-nav {
+    display: flex !important;
+    flex: 1;
+    justify-content: center !important;
+    gap: 1rem;
+    margin: 0 !important;
+}
+
+.navbar .d-flex {
+    flex: 0 0 auto !important;
 }
 
 a {
@@ -312,11 +336,6 @@ a:hover {
 }
 
 /* Navbar smooth animations */
-.navbar {
-    animation: navbarGlow 3s ease-in-out infinite;
-    transition: all 0.5s ease;
-}
-
 @keyframes navbarGlow {
     0%, 100% {
         box-shadow: 0 4px 12px rgba(129, 111, 209, 0.1);
