@@ -1,10 +1,14 @@
+html {
+    font-size: 16px;
+}
+
 body {
     background-color: #1C1633;
 }
 
 h1 {
     color: #816FD1;
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 
 h3 {
@@ -27,13 +31,13 @@ article ul,
 article ol {
     color: #6E6B7C;
     font-family: 'Montserrat', sans-serif;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
 }
 
 article ul li,
 article ol li {
     color: #816FD1;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.375rem;
 }
 
 ul, ol{
@@ -59,8 +63,8 @@ p {
 mark {
     background-color: #423F52;
     color: #816FD1;
-    padding: 0 0.2em;
-    border-radius: 0.2em;
+    padding: 0 0.125rem;
+    border-radius: 0.125rem;
 }
 
 table {
@@ -80,7 +84,7 @@ table {
 .contrast-table td {
     border-color: #423F52 !important;
     color: #816FD1 !important;
-    padding: 12px 8px !important;
+    padding: 0.75rem 0.5rem !important;
 }
 
 .contrast-table thead {
@@ -111,7 +115,7 @@ table {
 .navbar {
 
     background-color: #221F33;
-    font-size: 20px;
+    font-size: 1.25rem;
     color: black;
 
 }
@@ -167,69 +171,69 @@ a {
 
 /* Fandom-style layout */
 section {
-    margin: 20px 0;
-    padding: 20px 0;
+    margin: 1.25rem 0;
+    padding: 1.25rem 0;
 }
 
 article {
     background-color: #221F33;
-    border: 2px solid #423F52;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(129, 111, 209, 0.1);
+    border: 0.125rem solid #423F52;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(129, 111, 209, 0.1);
     transition: all 0.3s ease;
 }
 
 article:hover {
     border-color: #816FD1;
-    box-shadow: 0 6px 12px rgba(129, 111, 209, 0.2);
-    transform: translateY(-2px);
+    box-shadow: 0 0.375rem 0.75rem rgba(129, 111, 209, 0.2);
+    transform: translateY(-0.125rem);
 }
 
 article h3 {
-    border-bottom: 2px solid #816FD1;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-    font-size: 24px;
+    border-bottom: 0.125rem solid #816FD1;
+    padding-bottom: 0.625rem;
+    margin-bottom: 0.9375rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
 }
 
 article h4 {
     color: #816FD1 !important;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    border-left: 3px solid #816FD1;
-    padding-left: 10px;
+    margin-top: 0.9375rem;
+    margin-bottom: 0.625rem;
+    border-left: 0.1875rem solid #816FD1;
+    padding-left: 0.625rem;
 }
 
 main {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
+    max-width: 75rem;
+    margin: 1.25rem auto;
+    padding: 0 1.25rem;
 }
 
 .container {
     background-color: #221F33;
-    border: 2px solid #423F52;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(129, 111, 209, 0.1);
+    border: 0.125rem solid #423F52;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(129, 111, 209, 0.1);
 }
 
 header {
-    border-bottom: 3px solid #816FD1;
-    margin-bottom: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    border-bottom: 0.1875rem solid #816FD1;
+    margin-bottom: 1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
     text-align: center;
     position: relative;
     background: 
-        repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(129, 111, 209, 0.1) 10px, rgba(129, 111, 209, 0.1) 20px),
-        repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(129, 111, 209, 0.05) 10px, rgba(129, 111, 209, 0.05) 20px);
-    background-size: 28.28px 28.28px;
+        repeating-linear-gradient(45deg, transparent, transparent 0.625rem, rgba(129, 111, 209, 0.1) 0.625rem, rgba(129, 111, 209, 0.1) 1.25rem),
+        repeating-linear-gradient(-45deg, transparent, transparent 0.625rem, rgba(129, 111, 209, 0.05) 0.625rem, rgba(129, 111, 209, 0.05) 1.25rem);
+    background-size: 1.7675rem 1.7675rem;
     animation: patternShift 20s linear infinite;
     width: 100vw;
     position: relative;
@@ -241,7 +245,9 @@ header {
 
 header img {
     display: block;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 1.25rem auto;
+    width: 6.25rem;
+    height: auto;
 }
 
 @keyframes patternShift {
@@ -261,7 +267,7 @@ header h1 {
 }
 
 /* Center welcome image */
-body > img {
+body > img {1.25rem
     display: block;
     margin: 20px auto;
     max-width: 100%;
@@ -270,11 +276,13 @@ body > img {
 
 /* Welcome image hover glow */
 .welcome-img {
-    transition: all 0.6s ease;
-    cursor: pointer;
+    width: 50rem;
+    height: auto;
 }
 
 .welcome-img:hover {
+    box-shadow: 0 0 1.5625rem rgba(129, 111, 209, 0.35), 0 0 3.125rem rgba(129, 111, 209, 0.15), inset 0 0 1.875rem rgba(129, 111, 209, 0.1);
+    filter: brightness(1.1) drop-shadow(0 0 0.9375rem
     box-shadow: 0 0 25px rgba(129, 111, 209, 0.35), 0 0 50px rgba(129, 111, 209, 0.15), inset 0 0 30px rgba(129, 111, 209, 0.1);
     filter: brightness(1.1) drop-shadow(0 0 15px rgba(129, 111, 209, 0.3));
 }
