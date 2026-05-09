@@ -380,14 +380,22 @@
 /* Паутинки */
 .cobweb {
     position: absolute;
-    font-size: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     opacity: 0;
     color: rgba(200, 200, 200, 0.5);
     z-index: 10;
-    animation: cobwebSway 4s ease-in-out infinite;
+    background-image: url('../../media/books/cobweb.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .cobweb.spider {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: none;
+    animation: cobwebSway 4s ease-in-out infinite;
     font-size: 1.5rem;
 }
 
@@ -401,39 +409,44 @@
 .cobweb-top-left {
     top: 0.5rem;
     left: 0.5rem;
+    transform: rotate(-90deg);
 }
 
 .cobweb-top-right {
     top: 0.5rem;
     right: 0.5rem;
+    transform: rotate(0deg);
 }
 
 .cobweb-bottom-left {
     bottom: 0.25rem;
     left: 0.5rem;
+    transform: rotate(180deg);
 }
 
 .cobweb-bottom-right {
     bottom: 0.25rem;
     right: 0.5rem;
+    transform: rotate(90deg);
 }
 
-.spider-top-left {
+/* Позиционирование паучков рядом с паутинками */
+.cobweb.spider.cobweb-top-left {
     top: 1.5rem;
     left: 1rem;
 }
 
-.spider-top-right {
+.cobweb.spider.cobweb-top-right {
     top: 1.5rem;
     right: 1rem;
 }
 
-.spider-bottom-left {
+.cobweb.spider.cobweb-bottom-left {
     bottom: 0.5rem;
     left: 1rem;
 }
 
-.spider-bottom-right {
+.cobweb.spider.cobweb-bottom-right {
     bottom: 0.5rem;
     right: 1rem;
 }
