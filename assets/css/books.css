@@ -149,13 +149,21 @@
 }
 
 .book-vertical .book-title {
-    font-size: 0.65rem;
+    font-size: 0.85rem;
     font-weight: bold;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     color: #FFFFFF;
-    text-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.8);
+    text-shadow: 
+        -1px -1px 2px rgba(0, 0, 0, 0.9),
+        1px -1px 2px rgba(0, 0, 0, 0.9),
+        -1px 1px 2px rgba(0, 0, 0, 0.9),
+        1px 1px 2px rgba(0, 0, 0, 0.9),
+        0 0 4px rgba(0, 0, 0, 0.95);
     max-width: 100%;
+    padding: 0.25rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0.125rem;
 }
 
 /* Горизонтальная книга */
@@ -189,12 +197,20 @@
 }
 
 .book-horizontal .book-title {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     font-weight: bold;
     color: #FFFFFF;
-    text-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.8);
+    text-shadow: 
+        -1px -1px 2px rgba(0, 0, 0, 0.9),
+        1px -1px 2px rgba(0, 0, 0, 0.9),
+        -1px 1px 2px rgba(0, 0, 0, 0.9),
+        1px 1px 2px rgba(0, 0, 0, 0.9),
+        0 0 4px rgba(0, 0, 0, 0.95);
     max-width: 90%;
     writing-mode: horizontal-tb;
+    padding: 0.2rem 0.4rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0.125rem;
 }
 
 /* Горизонтальные стопки */
@@ -248,13 +264,21 @@
 }
 
 .book-slash .book-title {
-    font-size: 0.65rem;
+    font-size: 0.85rem;
     font-weight: bold;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     color: #FFFFFF;
-    text-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.8);
+    text-shadow: 
+        -1px -1px 2px rgba(0, 0, 0, 0.9),
+        1px -1px 2px rgba(0, 0, 0, 0.9),
+        -1px 1px 2px rgba(0, 0, 0, 0.9),
+        1px 1px 2px rgba(0, 0, 0, 0.9),
+        0 0 4px rgba(0, 0, 0, 0.95);
     max-width: 100%;
+    padding: 0.25rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0.125rem;
 }
 
 /* Наклоненная книга (бэкслеш \) */
@@ -289,13 +313,21 @@
 }
 
 .book-backslash .book-title {
-    font-size: 0.65rem;
+    font-size: 0.85rem;
     font-weight: bold;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     color: #FFFFFF;
-    text-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.8);
+    text-shadow: 
+        -1px -1px 2px rgba(0, 0, 0, 0.9),
+        1px -1px 2px rgba(0, 0, 0, 0.9),
+        -1px 1px 2px rgba(0, 0, 0, 0.9),
+        1px 1px 2px rgba(0, 0, 0, 0.9),
+        0 0 4px rgba(0, 0, 0, 0.95);
     max-width: 100%;
+    padding: 0.25rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0.125rem;
 }
 
 /* Пустое место */
@@ -313,7 +345,7 @@
 
 .book-deltarune {
     background-color: #000000;
-    background-image: url('https://static.wikia.nocookie.net/undertale/images/c/c5/Deltarune_Wiki_logo.png/revision/latest/thumbnail/width/360/height/450?cb=20251010190609&path-prefix=ru');
+    background-image: url('https://images.wikia.nocookie.net/deltarune/images/2/2f/Deltarune_Logo.png');
 }
 
 .book-roblox {
