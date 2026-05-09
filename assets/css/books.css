@@ -114,10 +114,11 @@
         0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: flex-end;
-    justify-content: flex-start;
+    justify-content: space-around;
     padding: 1.25rem 1.25rem 1.25rem 1.25rem;
-    gap: 1rem;
+    gap: 0.5rem;
     overflow: visible;
+    flex-wrap: wrap;
 }
 
 /* Книги */
@@ -136,6 +137,7 @@
     align-items: center;
     text-align: center;
     flex-shrink: 0;
+    margin: 0 0.75rem;
 }
 
 .book:hover {
@@ -196,65 +198,65 @@
     background: linear-gradient(135deg, #C03B3B 0%, #8B0000 100%);
 }
 
-/* Паутинки в углах */
-.cobweb-corner {
-    position: absolute;
-    width: 2.5rem;
-    height: 2.5rem;
-    opacity: 0.5;
-    animation: cobwebSway 4s ease-in-out infinite;
-}
-
-.cobweb-corner svg {
-    width: 100%;
-    height: 100%;
-}
-
-.cobweb-top-left {
-    top: -1.25rem;
-    left: 0;
-    animation-delay: 0s;
-}
-
-.cobweb-top-right {
-    top: -а */
+/* Паутинки - показываются только когда на полке меньше 3 книг */
 .cobweb {
     position: absolute;
     font-size: 2rem;
-    opacity: 0.6;
+    opacity: 0;
     animation: cobwebSway 4s ease-in-out infinite;
     color: rgba(200, 200, 200, 0.4);
-    right: 0;
+    right: 1.25rem;
     bottom: 1.25rem;
+    transition: opacity 0.3s ease;
 }
 
 .cobweb::before {
-    content: "🕷️";
+    content: "🕸️";
 }
 
 .cobweb-1 {
-    right: 1.25rem;
     animation-delay: 0s;
 }
 
 .cobweb-2 {
-    right: 1.25rem;
     animation-delay: 1s;
 }
 
 .cobweb-3 {
-    right: 1.25rem;
     animation-delay: 2s;
 }
 
 .cobweb-4 {
-    right: 1.25rem;
     animation-delay: 1.5s;
 }
 
 .cobweb-5 {
-    right: 1.25rem;
     animation-delay: 0;
+}
+
+/* Показываем паутинки только когда книг меньше 3 */
+.bookshelf-shelf[data-book-count="0"] .cobweb,
+.bookshelf-shelf[data-book-count="1"] .cobweb,
+.bookshelf-shelf[data-book-count="2"] .cobweb {
+    opacity: 0.6;
+}
+
+@keyframes cobwebSway {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-2px) rotate(-1deg);
+    }
+    50% {
+        transform: translateY(0) rotate(0deg);
+    }
+    75% {
+        transform: translateY(2px) rotate(1deg);
+    }
+}
+
+footer {
     padding: 2rem 1.25rem;
     margin-top: 3.75rem;
     border-top: 0.125rem solid var(--border);
@@ -271,12 +273,13 @@ footer p {
     .bookshelf-shelf {
         height: 7.5rem;
         padding: 0 0.5rem 0.625rem 0.5rem;
-        gap: 0.5rem;
+        gap: 0.25rem;
     }
 
     .book {
         height: 6rem;
         width: 2rem;
+        margin: 0 0.5rem;
     }
 
     .empty-book {
