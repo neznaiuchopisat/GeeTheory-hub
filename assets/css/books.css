@@ -1,0 +1,266 @@
+/* Books Page Styles */
+
+/* Синяя цветовая палитра */
+:root {
+    --primary-blue: #2E7BB4;
+    --primary-dark: #1C3A52;
+    --primary-light: #4A9FDD;
+    --accent-light: #6BB0E0;
+    --background: #0F1E2E;
+    --surface: #1A2F42;
+    --border: #2A4A66;
+}
+
+.books-page {
+    background-color: var(--background);
+}
+
+.books-header {
+    border-bottom: 0.1875rem solid var(--primary-blue) !important;
+    margin-bottom: 1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    text-align: center;
+    position: relative;
+    background: 
+        radial-gradient(circle, rgba(74, 159, 221, 0.1) 2px, transparent 2px),
+        radial-gradient(circle, rgba(74, 159, 221, 0.05) 1px, transparent 1px);
+    background-size: 2.5rem 2.5rem;
+    background-position: 0 0, 1.25rem 1.25rem;
+    animation: patternFloat 30s linear infinite;
+    width: 100%;
+}
+
+@keyframes patternFloat {
+    0% {
+        background-position: 0 0, 1.25rem 1.25rem;
+    }
+    100% {
+        background-position: 2.5rem 2.5rem, 3.75rem 3.75rem;
+    }
+}
+
+.books-header img {
+    display: block;
+    margin: 0 auto 1.25rem auto;
+    width: 6.25rem;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Переопределение цветов для books page */
+.books-page h1 {
+    color: var(--primary-light) !important;
+    font-weight: bold !important;
+    text-align: center;
+    text-shadow: 0 0 1.5rem rgba(74, 159, 221, 0.3);
+}
+
+.books-page .navbar {
+    background-color: var(--surface);
+}
+
+.books-page .navbar-brand {
+    color: var(--primary-light) !important;
+}
+
+.books-page .nav-link {
+    color: var(--accent-light) !important;
+}
+
+.books-page .nav-link:hover {
+    color: #FFFFFF !important;
+    border-bottom: 2px solid var(--primary-light);
+}
+
+.books-page .btn-outline-success {
+    color: var(--primary-light) !important;
+    border-color: var(--primary-light) !important;
+}
+
+.books-page .btn-outline-success:hover {
+    background-color: var(--primary-light) !important;
+    color: var(--background) !important;
+}
+
+/* Книжная полка */
+.bookshelf-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30rem;
+    margin: 2.5rem 0;
+    padding: 2.5rem 0;
+}
+
+.bookshelf {
+    position: relative;
+    width: 100%;
+    max-width: 90rem;
+}
+
+.bookshelf-shelf {
+    position: relative;
+    height: 20rem;
+    background: linear-gradient(180deg, rgba(42, 74, 102, 0.3) 0%, rgba(30, 50, 70, 0.5) 50%, rgba(20, 30, 40, 0.8) 100%);
+    border-top: 0.25rem solid var(--primary-blue);
+    border-bottom: 0.5rem solid var(--primary-dark);
+    box-shadow: 
+        inset 0 0.125rem 0.5rem rgba(74, 159, 221, 0.1),
+        inset 0 -0.125rem 0.5rem rgba(0, 0, 0, 0.5),
+        0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: flex-end;
+    padding: 0 1.25rem 1.25rem 1.25rem;
+    gap: 1.25rem;
+    overflow: visible;
+}
+
+/* Книги */
+.book {
+    position: relative;
+    height: 12rem;
+    width: 2.5rem;
+    border-radius: 0.125rem;
+    box-shadow: 
+        -0.25rem 0.5rem 1rem rgba(0, 0, 0, 0.5),
+        inset 0.125rem 0 0.25rem rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.book:hover {
+    transform: translateY(-0.5rem) !important;
+    box-shadow: 
+        -0.5rem 1rem 2rem rgba(0, 0, 0, 0.7),
+        inset 0.125rem 0 0.25rem rgba(255, 255, 255, 0.2);
+}
+
+.book-spine {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: #FFFFFF;
+}
+
+.book-title {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+    text-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.8);
+}
+
+.book-author {
+    font-size: 0.65rem;
+    opacity: 0.9;
+}
+
+/* Цвета книг */
+.book-1 {
+    background: linear-gradient(135deg, #D4531F 0%, #A83A1F 100%);
+}
+
+.book-2 {
+    background: linear-gradient(135deg, #1F5A8F 0%, #1A4A7A 100%);
+}
+
+.book-3 {
+    background: linear-gradient(135deg, #7B3FF2 0%, #5A2FD1 100%);
+}
+
+.book-4 {
+    background: linear-gradient(135deg, #2D5F3F 0%, #1F4A2F 100%);
+}
+
+.book-5 {
+    background: linear-gradient(135deg, #FFD700 0%, #DAA520 100%);
+}
+
+.book-6 {
+    background: linear-gradient(135deg, #C03B3B 0%, #8B0000 100%);
+}
+
+/* Паутинка */
+.cobweb {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.6;
+    animation: cobwebSway 4s ease-in-out infinite;
+    color: rgba(200, 200, 200, 0.4);
+}
+
+.cobweb::before {
+    content: "🕷️";
+}
+
+.cobweb-1 {
+    right: 12rem;
+    top: 1.25rem;
+    animation-delay: 0s;
+}
+
+.cobweb-2 {
+    right: 3.75rem;
+    top: 2rem;
+    animation-delay: 1s;
+}
+
+.cobweb-3 {
+    left: 1.25rem;
+    top: 0.625rem;
+    animation-delay: 2s;
+}
+
+@keyframes cobwebSway {
+    0%, 100% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(0.25rem) translateY(-0.125rem);
+    }
+    50% {
+        transform: translateX(-0.25rem) translateY(0);
+    }
+    75% {
+        transform: translateX(0.25rem) translateY(0.125rem);
+    }
+}
+
+/* Footer */
+footer {
+    color: var(--accent-light);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3.75rem;
+    border-top: 0.125rem solid var(--border);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bookshelf-shelf {
+        height: 15rem;
+        padding: 0 0.5rem 1rem 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .book {
+        height: 10rem;
+        width: 2rem;
+    }
+
+    .bookshelf-section {
+        min-height: 20rem;
+    }
+}
