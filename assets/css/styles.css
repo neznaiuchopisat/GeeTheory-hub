@@ -4,6 +4,14 @@ html {
 
 body {
     background-color: #1C1633;
+    margin: 0;
+    padding: 0;
+}
+
+.page-wrapper {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
 }
 
 h1 {
@@ -209,9 +217,9 @@ article h4 {
 }
 
 main {
-    max-width: 75rem;
-    margin: 1.25rem auto;
-    padding: 0 1.25rem;
+    max-width: 100%;
+    margin: 1.25rem 0;
+    padding: 0;
 }
 
 .container {
@@ -235,12 +243,7 @@ header {
         repeating-linear-gradient(-45deg, transparent, transparent 0.625rem, rgba(129, 111, 209, 0.05) 0.625rem, rgba(129, 111, 209, 0.05) 1.25rem);
     background-size: 1.7675rem 1.7675rem;
     animation: patternShift 20s linear infinite;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    width: 100%;
 }
 
 header img {
@@ -253,6 +256,7 @@ header img {
 @keyframes patternShift {
     0% {
         background-position: 0 0;
+    max-width: 100%;
     }
     100% {
         background-position: 28.28px 28.28px;
@@ -266,9 +270,9 @@ header h1 {
     margin-top: 15px;
 }
 
-/* Center welcome image */
-body > img {1.25rem
+/* Cent.page-wrapper > img {
     display: block;
+    margin: 1.25remck;
     margin: 20px auto;
     max-width: 100%;
     height: auto;
@@ -290,6 +294,12 @@ body > img {1.25rem
 h1 {
     color: #816FD1 !important;
     font-weight: bold !important;
+    text-align: center;
+}
+
+.page-wrapper > p,
+.page-wrapper > a {
+    text-align: center;
 }
 
 a:hover {
