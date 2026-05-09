@@ -104,7 +104,7 @@
 
 .bookshelf-shelf {
     position: relative;
-    height: 10rem;
+    min-height: 10rem;
     background: linear-gradient(180deg, rgba(42, 74, 102, 0.3) 0%, rgba(30, 50, 70, 0.5) 50%, rgba(20, 30, 40, 0.8) 100%);
     border-top: 0.25rem solid var(--primary-blue);
     border-bottom: 0.5rem solid var(--primary-dark);
@@ -114,7 +114,8 @@
         0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: flex-end;
-    padding: 0 1.25rem 0.875rem 1.25rem;
+    justify-content: flex-start;
+    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
     gap: 1rem;
     overflow: visible;
 }
@@ -142,27 +143,6 @@
     box-shadow: 
         -0.5rem 1rem 2rem rgba(0, 0, 0, 0.7),
         inset 0.125rem 0 0.25rem rgba(255, 255, 255, 0.2);
-}
-
-/* Пустые книги (линии) */
-.empty-book {
-    position: relative;
-    height: 7.5rem;
-    width: 2.5rem;
-    border-radius: 0;
-    box-shadow: none;
-    transition: all 0.4s ease;
-    cursor: default;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-shrink: 0;
-    background: transparent;
-    font-size: 3rem;
-    color: rgba(200, 200, 200, 0.3);
-    font-weight: bold;
-    font-family: monospace;
 }
 
 .book-spine {
@@ -237,54 +217,44 @@
 }
 
 .cobweb-top-right {
-    top: -1.25rem;
+    top: -а */
+.cobweb {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.6;
+    animation: cobwebSway 4s ease-in-out infinite;
+    color: rgba(200, 200, 200, 0.4);
     right: 0;
+    bottom: 1.25rem;
+}
+
+.cobweb::before {
+    content: "🕷️";
+}
+
+.cobweb-1 {
+    right: 1.25rem;
+    animation-delay: 0s;
+}
+
+.cobweb-2 {
+    right: 1.25rem;
     animation-delay: 1s;
 }
 
-.cobweb-mid-left {
-    top: -1.25rem;
-    left: 0;
+.cobweb-3 {
+    right: 1.25rem;
     animation-delay: 2s;
 }
 
-.cobweb-mid-right {
-    top: -1.25rem;
-    right: 0;
-    animation-delay: 0.5s;
-}
-
-.cobweb-bottom-left {
-    top: -1.25rem;
-    left: 0;
+.cobweb-4 {
+    right: 1.25rem;
     animation-delay: 1.5s;
 }
 
-.cobweb-bottom-right {
-    top: -1.25rem;
-    right: 0;
-    animation-delay: 2.5s;
-}
-
-@keyframes cobwebSway {
-    0%, 100% {
-        transform: translateX(0) translateY(0);
-    }
-    25% {
-        transform: translateX(0.1875rem) translateY(-0.0625rem);
-    }
-    50% {
-        transform: translateX(-0.1875rem) translateY(0);
-    }
-    75% {
-        transform: translateX(0.1875rem) translateY(0.0625rem);
-    }
-}
-
-/* Footer */
-footer {
-    color: var(--accent-light);
-    text-align: center;
+.cobweb-5 {
+    right: 1.25rem;
+    animation-delay: 0;
     padding: 2rem 1.25rem;
     margin-top: 3.75rem;
     border-top: 0.125rem solid var(--border);
