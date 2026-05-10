@@ -340,37 +340,37 @@
 /* Стили книг по названиям */
 .book-undertale {
     background-color: #000000;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Undertale.png');
+    background-image: url('../../media/books/undertale.png');
 }
 
 .book-deltarune {
     background-color: #000000;
-    background-image: url('https://user-images.githubusercontent.com/35242550/147987895-053c724c-eefd-4cc0-ae20-a1502ab0120d.png');
+    background-image: url('../../media/books/deltarune.png');
 }
 
 .book-roblox {
     background-color: #FFFFFF;
-    background-image: url('https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/roblox-icon.png');
+    background-image: url('../../media/books/roblox.png');
 }
 
 .book-mario {
     background-color: #D4A500;
-    background-image: url('https://avatanplus.com/files/resources/mid/578d18d67761b155ff2905d9.png');
+    background-image: url('../../media/books/mario.png');
 }
 
 .book-zelda {
     background-color: #7CB342;
-    background-image: url('https://www.vhv.rs/dpng/d/76-765817_legend-of-zelda-sword-png-transparent-png.png');
+    background-image: url('../../media/books/zelda.png');
 }
 
 .book-fnaf {
     background-color: #8B6BA8;
-    background-image: url('https://toppng.com/uploads/preview/freddy-freddy-fazbear-face-11563480899e5sjwkkcyr.png');
+    background-image: url('../../media/books/fnaf.png');
 }
 
 .book-resident-evil {
     background-color: #8B6B47;
-    background-image: url('https://i.pinimg.com/474x/b3/21/1e/b3211ef44254b83366e7d01ff00b4213.jpg');
+    background-image: url('../../media/books/resident-evil.jpg');
 }
 
 .book-unnamed {
