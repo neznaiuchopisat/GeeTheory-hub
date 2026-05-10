@@ -1,4 +1,4 @@
-/* Popular Discussions Page Styles - Red Theme */
+/* Popular Discussions Page Styles - Red Theme with Flying Sparks Animation */
 
 :root {
     --primary-red: #E53E3E;
@@ -23,117 +23,35 @@
     text-align: center;
     position: relative;
     background-color: rgba(45, 15, 15, 0.5);
+    /* Анимация "Летящие искры" - огоньки поднимаются вверх */
     background-image: 
-        radial-gradient(ellipse 4px 8px at 10% 30%, rgba(255, 107, 107, 0.9) 0%, transparent 60%),
-        radial-gradient(ellipse 5px 10px at 25% 15%, rgba(255, 152, 72, 0.7) 0%, transparent 50%),
-        radial-gradient(ellipse 3px 7px at 40% 35%, rgba(255, 107, 107, 0.8) 0%, transparent 60%),
-        radial-gradient(ellipse 6px 12px at 60% 20%, rgba(255, 152, 72, 0.75) 0%, transparent 50%),
-        radial-gradient(ellipse 4px 9px at 80% 28%, rgba(255, 107, 107, 0.85) 0%, transparent 55%),
-        radial-gradient(ellipse 5px 11px at 90% 15%, rgba(255, 152, 72, 0.7) 0%, transparent 50%);
-    background-size: 100% 100%;
-    animation: fireFlicker 10s ease-in-out infinite;
+        radial-gradient(circle 1.5px at 5% 80%, rgba(255, 107, 107, 1) 0%, transparent 50%),
+        radial-gradient(circle 1px at 15% 75%, rgba(255, 152, 72, 0.9) 0%, transparent 50%),
+        radial-gradient(circle 1.2px at 8% 70%, rgba(255, 107, 107, 0.95) 0%, transparent 50%),
+        radial-gradient(circle 1.5px at 22% 85%, rgba(255, 152, 72, 0.85) 0%, transparent 50%),
+        radial-gradient(circle 1px at 12% 60%, rgba(255, 107, 107, 0.9) 0%, transparent 50%),
+        radial-gradient(circle 1.3px at 18% 78%, rgba(255, 152, 72, 0.95) 0%, transparent 50%),
+        radial-gradient(circle 1.5px at 3% 65%, rgba(255, 107, 107, 0.88) 0%, transparent 50%),
+        radial-gradient(circle 1.2px at 25% 72%, rgba(255, 152, 72, 0.92) 0%, transparent 50%),
+        radial-gradient(circle 1.4px at 10% 90%, rgba(255, 107, 107, 0.85) 0%, transparent 50%),
+        radial-gradient(circle 1px at 20% 95%, rgba(255, 152, 72, 0.88) 0%, transparent 50%);
+    background-size: 30% 100%;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    animation: sparklesAscend 15s linear infinite;
     width: 100%;
 }
 
-@keyframes fireFlicker {
+/* Анимация: искры поднимаются от низа к верху (как пламя) */
+@keyframes sparklesAscend {
     0% {
-        background-image: 
-            radial-gradient(ellipse 4px 8px at 10% 30%, rgba(255, 107, 107, 0.9) 0%, transparent 60%),
-            radial-gradient(ellipse 5px 10px at 25% 15%, rgba(255, 152, 72, 0.7) 0%, transparent 50%),
-            radial-gradient(ellipse 3px 7px at 40% 35%, rgba(255, 107, 107, 0.8) 0%, transparent 60%),
-            radial-gradient(ellipse 6px 12px at 60% 20%, rgba(255, 152, 72, 0.75) 0%, transparent 50%),
-            radial-gradient(ellipse 4px 9px at 80% 28%, rgba(255, 107, 107, 0.85) 0%, transparent 55%),
-            radial-gradient(ellipse 5px 11px at 90% 15%, rgba(255, 152, 72, 0.7) 0%, transparent 50%);
-    }
-    10% {
-        background-image: 
-            radial-gradient(ellipse 4px 8px at 11% 31%, rgba(255, 107, 107, 0.88) 0%, transparent 60%),
-            radial-gradient(ellipse 5px 10px at 26% 16%, rgba(255, 152, 72, 0.72) 0%, transparent 50%),
-            radial-gradient(ellipse 3px 7px at 41% 36%, rgba(255, 107, 107, 0.82) 0%, transparent 60%),
-            radial-gradient(ellipse 6px 12px at 61% 21%, rgba(255, 152, 72, 0.77) 0%, transparent 50%),
-            radial-gradient(ellipse 4px 9px at 81% 29%, rgba(255, 107, 107, 0.87) 0%, transparent 55%),
-            radial-gradient(ellipse 5px 11px at 91% 16%, rgba(255, 152, 72, 0.72) 0%, transparent 50%);
-    }
-    20% {
-        background-image: 
-            radial-gradient(ellipse 5px 10px at 13% 29%, rgba(255, 152, 72, 0.8) 0%, transparent 55%),
-            radial-gradient(ellipse 4px 9px at 28% 18%, rgba(255, 107, 107, 0.85) 0%, transparent 60%),
-            radial-gradient(ellipse 5px 11px at 38% 32%, rgba(255, 152, 72, 0.75) 0%, transparent 50%),
-            radial-gradient(ellipse 4px 8px at 62% 22%, rgba(255, 107, 107, 0.8) 0%, transparent 60%),
-            radial-gradient(ellipse 6px 12px at 78% 30%, rgba(255, 152, 72, 0.7) 0%, transparent 50%),
-            radial-gradient(ellipse 4px 9px at 92% 18%, rgba(255, 107, 107, 0.9) 0%, transparent 55%);
-    }
-    30% {
-        background-image: 
-            radial-gradient(ellipse 4px 8px at 12% 32%, rgba(255, 107, 107, 0.92) 0%, transparent 58%),
-            radial-gradient(ellipse 5px 10px at 24% 14%, rgba(255, 152, 72, 0.74) 0%, transparent 52%),
-            radial-gradient(ellipse 3px 7px at 42% 34%, rgba(255, 107, 107, 0.84) 0%, transparent 62%),
-            radial-gradient(ellipse 6px 12px at 58% 19%, rgba(255, 152, 72, 0.73) 0%, transparent 48%),
-            radial-gradient(ellipse 4px 9px at 82% 27%, rgba(255, 107, 107, 0.88) 0%, transparent 54%),
-            radial-gradient(ellipse 5px 11px at 89% 17%, rgba(255, 152, 72, 0.68) 0%, transparent 51%);
-    }
-    40% {
-        background-image: 
-            radial-gradient(ellipse 3px 6px at 15% 28%, rgba(255, 107, 107, 0.95) 0%, transparent 50%),
-            radial-gradient(ellipse 6px 12px at 22% 12%, rgba(255, 152, 72, 0.65) 0%, transparent 55%),
-            radial-gradient(ellipse 4px 9px at 42% 38%, rgba(255, 107, 107, 0.85) 0%, transparent 60%),
-            radial-gradient(ellipse 5px 10px at 58% 18%, rgba(255, 152, 72, 0.8) 0%, transparent 50%),
-            radial-gradient(ellipse 3px 7px at 82% 32%, rgba(255, 107, 107, 0.9) 0%, transparent 55%),
-            radial-gradient(ellipse 6px 12px at 88% 20%, rgba(255, 152, 72, 0.75) 0%, transparent 50%);
+        background-position: 0 100%;
     }
     50% {
-        background-image: 
-            radial-gradient(ellipse 4px 9px at 14% 26%, rgba(255, 152, 72, 0.76) 0%, transparent 53%),
-            radial-gradient(ellipse 4px 8px at 26% 16%, rgba(255, 107, 107, 0.86) 0%, transparent 59%),
-            radial-gradient(ellipse 6px 12px at 40% 30%, rgba(255, 152, 72, 0.78) 0%, transparent 49%),
-            radial-gradient(ellipse 3px 7px at 62% 23%, rgba(255, 107, 107, 0.89) 0%, transparent 61%),
-            radial-gradient(ellipse 5px 10px at 79% 31%, rgba(255, 152, 72, 0.71) 0%, transparent 51%),
-            radial-gradient(ellipse 4px 9px at 91% 19%, rgba(255, 107, 107, 0.84) 0%, transparent 57%);
-    }
-    60% {
-        background-image: 
-            radial-gradient(ellipse 5px 10px at 12% 28%, rgba(255, 107, 107, 0.91) 0%, transparent 56%),
-            radial-gradient(ellipse 5px 11px at 27% 17%, rgba(255, 152, 72, 0.69) 0%, transparent 51%),
-            radial-gradient(ellipse 4px 8px at 39% 33%, rgba(255, 107, 107, 0.83) 0%, transparent 61%),
-            radial-gradient(ellipse 6px 12px at 61% 21%, rgba(255, 152, 72, 0.76) 0%, transparent 49%),
-            radial-gradient(ellipse 4px 9px at 81% 29%, rgba(255, 107, 107, 0.86) 0%, transparent 53%),
-            radial-gradient(ellipse 5px 11px at 89% 16%, rgba(255, 152, 72, 0.72) 0%, transparent 52%);
-    }
-    70% {
-        background-image: 
-            radial-gradient(ellipse 4px 8px at 11% 29%, rgba(255, 152, 72, 0.78) 0%, transparent 54%),
-            radial-gradient(ellipse 4px 9px at 29% 19%, rgba(255, 107, 107, 0.87) 0%, transparent 58%),
-            radial-gradient(ellipse 5px 11px at 41% 31%, rgba(255, 152, 72, 0.74) 0%, transparent 51%),
-            radial-gradient(ellipse 4px 8px at 60% 22%, rgba(255, 107, 107, 0.82) 0%, transparent 60%),
-            radial-gradient(ellipse 6px 12px at 80% 30%, rgba(255, 152, 72, 0.68) 0%, transparent 50%),
-            radial-gradient(ellipse 4px 9px at 92% 17%, rgba(255, 107, 107, 0.88) 0%, transparent 56%);
-    }
-    80% {
-        background-image: 
-            radial-gradient(ellipse 5px 11px at 9% 31%, rgba(255, 107, 107, 0.89) 0%, temporary 55%),
-            radial-gradient(ellipse 6px 12px at 23% 13%, rgba(255, 152, 72, 0.72) 0%, transparent 52%),
-            radial-gradient(ellipse 4px 9px at 43% 36%, rgba(255, 107, 107, 0.84) 0%, transparent 59%),
-            radial-gradient(ellipse 5px 10px at 59% 20%, rgba(255, 152, 72, 0.77) 0%, transparent 51%),
-            radial-gradient(ellipse 3px 7px at 83% 28%, rgba(255, 107, 107, 0.91) 0%, transparent 54%),
-            radial-gradient(ellipse 6px 12px at 90% 18%, rgba(255, 152, 72, 0.70) 0%, transparent 51%);
-    }
-    90% {
-        background-image: 
-            radial-gradient(ellipse 4px 8px at 10% 30%, rgba(255, 152, 72, 0.75) 0%, transparent 55%),
-            radial-gradient(ellipse 5px 10px at 25% 16%, rgba(255, 107, 107, 0.86) 0%, transparent 58%),
-            radial-gradient(ellipse 3px 7px at 40% 34%, rgba(255, 152, 72, 0.76) 0%, transparent 52%),
-            radial-gradient(ellipse 6px 12px at 61% 21%, rgba(255, 107, 107, 0.81) 0%, transparent 59%),
-            radial-gradient(ellipse 4px 9px at 81% 29%, rgba(255, 152, 72, 0.69) 0%, transparent 50%),
-            radial-gradient(ellipse 5px 11px at 91% 16%, rgba(255, 107, 107, 0.89) 0%, transparent 54%);
+        background-position: 0 50%;
     }
     100% {
-        background-image: 
-            radial-gradient(ellipse 4px 8px at 10% 30%, rgba(255, 107, 107, 0.9) 0%, transparent 60%),
-            radial-gradient(ellipse 5px 10px at 25% 15%, rgba(255, 152, 72, 0.7) 0%, transparent 50%),
-            radial-gradient(ellipse 3px 7px at 40% 35%, rgba(255, 107, 107, 0.8) 0%, transparent 60%),
-            radial-gradient(ellipse 6px 12px at 60% 20%, rgba(255, 152, 72, 0.75) 0%, transparent 50%),
-            radial-gradient(ellipse 4px 9px at 80% 28%, rgba(255, 107, 107, 0.85) 0%, transparent 55%),
-            radial-gradient(ellipse 5px 11px at 90% 15%, rgba(255, 152, 72, 0.7) 0%, transparent 50%);
+        background-position: 0 -100%;
     }
 }
 
