@@ -38,18 +38,14 @@
     background-size: 30% 100%;
     background-repeat: repeat-x;
     background-position: 0 0;
-    animation: sparklesAscend 12s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+    animation: sparklesAscend 14s ease-in-out infinite;
     width: 100%;
 }
 
-/* Анимация: плавное движение огоньков вверх с фейдом */
+/* Анимация: плавное движение огоньков вверх */
 @keyframes sparklesAscend {
     0% {
         background-position: 0 100%;
-        opacity: 0.2;
-    }
-    5% {
-        opacity: 1;
     }
     10% {
         background-position: 0 90%;
@@ -65,7 +61,6 @@
     }
     50% {
         background-position: 0 50%;
-        opacity: 1;
     }
     60% {
         background-position: 0 40%;
@@ -79,12 +74,8 @@
     90% {
         background-position: 0 10%;
     }
-    95% {
-        opacity: 0.5;
-    }
     100% {
         background-position: 0 0%;
-        opacity: 0;
     }
 }
 
