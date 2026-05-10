@@ -381,8 +381,8 @@
 /* Паутинки */
 .cobweb {
     position: absolute;
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
     opacity: 0;
     color: rgba(200, 200, 200, 0.5);
     z-index: 10;
