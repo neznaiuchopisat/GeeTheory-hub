@@ -340,37 +340,37 @@
 /* Стили книг по названиям */
 .book-undertale {
     background-color: #000000;
-    background-image: url('../../media/books/undertale.png');
+    background-image: url('../media/books/undertale.png');
 }
 
 .book-deltarune {
     background-color: #000000;
-    background-image: url('../../media/books/deltarune.png');
+    background-image: url('../media/books/deltarune.png');
 }
 
 .book-roblox {
     background-color: #FFFFFF;
-    background-image: url('../../media/books/roblox.png');
+    background-image: url('../media/books/roblox.png');
 }
 
 .book-mario {
     background-color: #D4A500;
-    background-image: url('../../media/books/mario.png');
+    background-image: url('../media/books/mario.png');
 }
 
 .book-zelda {
     background-color: #7CB342;
-    background-image: url('../../media/books/zelda.png');
+    background-image: url('../media/books/zelda.png');
 }
 
 .book-fnaf {
     background-color: #8B6BA8;
-    background-image: url('../../media/books/fnaf.png');
+    background-image: url('../media/books/fnaf.png');
 }
 
 .book-resident-evil {
     background-color: #8B6B47;
-    background-image: url('../../media/books/resident_evil.png');
+    background-image: url('../media/books/resident_evil.png');
 }
 
 .book-unnamed {
