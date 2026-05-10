@@ -216,19 +216,20 @@
 /* Горизонтальные стопки */
 .book-horizontal-stack {
     position: relative;
-    height: 4.5rem;
-    width: 5rem;
+    height: auto;
+    width: 8.5rem;
     flex-shrink: 0;
     margin-right: 0.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.15rem;
-    align-items: center;
+    gap: 0.1rem;
+    align-items: flex-start;
     justify-content: flex-end;
 }
 
 .book-horizontal-stack .book-horizontal {
     margin-right: 0;
+    margin-bottom: 0;
     width: 100%;
 }
 
@@ -385,7 +386,7 @@
     opacity: 0;
     color: rgba(200, 200, 200, 0.5);
     z-index: 10;
-    background-image: url('../../media/books/cobweb.png');
+    background-image: url('../media/books/cobweb.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
