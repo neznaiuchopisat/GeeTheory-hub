@@ -38,20 +38,53 @@
     background-size: 30% 100%;
     background-repeat: repeat-x;
     background-position: 0 0;
-    animation: sparklesAscend 15s linear infinite;
+    animation: sparklesAscend 12s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
     width: 100%;
 }
 
-/* Анимация: искры поднимаются от низа к верху (как пламя) */
+/* Анимация: плавное движение огоньков вверх с фейдом */
 @keyframes sparklesAscend {
     0% {
         background-position: 0 100%;
+        opacity: 0.2;
+    }
+    5% {
+        opacity: 1;
+    }
+    10% {
+        background-position: 0 90%;
+    }
+    20% {
+        background-position: 0 80%;
+    }
+    30% {
+        background-position: 0 70%;
+    }
+    40% {
+        background-position: 0 60%;
     }
     50% {
         background-position: 0 50%;
+        opacity: 1;
+    }
+    60% {
+        background-position: 0 40%;
+    }
+    70% {
+        background-position: 0 30%;
+    }
+    80% {
+        background-position: 0 20%;
+    }
+    90% {
+        background-position: 0 10%;
+    }
+    95% {
+        opacity: 0.5;
     }
     100% {
-        background-position: 0 -100%;
+        background-position: 0 0%;
+        opacity: 0;
     }
 }
 
