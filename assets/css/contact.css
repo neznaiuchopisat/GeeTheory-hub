@@ -1,0 +1,126 @@
+/* Contact Page Styles - Warm Salad Yellow-Green Theme */
+
+:root {
+    --primary-salad: #BFCC00; /* Warm salad green-yellow */
+    --primary-light: #D9EB9A;
+    --primary-dark: #8FA000;
+    --surface: #4A5F1F;
+    --background: #2D3D16;
+    --accent: #E8F5D8;
+    --soft: rgba(191, 204, 0, 0.14);
+}
+
+.contact-page {
+    background-color: var(--background);
+    color: var(--accent);
+}
+
+.contact-header {
+    border-bottom: 0.1875rem solid var(--primary-salad) !important;
+    margin-bottom: 1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(180deg, rgba(191, 204, 0, 0.18), rgba(217, 235, 154, 0.18));
+    background-image: none;
+    animation: none;
+    width: 100%;
+    overflow: hidden;
+    min-height: 220px;
+}
+
+.contact-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(191, 204, 0, 0.12) 0.5rem, transparent 0.7rem),
+        radial-gradient(circle at 80% 80%, rgba(217, 235, 154, 0.1) 0.4rem, transparent 0.6rem),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.02) 75%, transparent 75%, transparent);
+    background-size: 8rem 8rem, 10rem 10rem, 4rem 4rem;
+    pointer-events: none;
+}
+
+.contact-header img {
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 6rem;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-page h1 {
+    color: var(--primary-salad) !important;
+    font-weight: bold !important;
+    text-align: center;
+    text-shadow: 0 0 1.5rem rgba(191, 204, 0, 0.35);
+    position: relative;
+    z-index: 2;
+}
+
+.contact-page .navbar {
+    background-color: rgba(74, 95, 31, 0.92);
+    position: relative;
+    z-index: 2;
+}
+
+.contact-page .navbar-brand,
+.contact-page .nav-link,
+.contact-page .btn-outline-success {
+    color: var(--accent) !important;
+}
+
+.contact-page .nav-link:hover,
+.contact-page .nav-link.active {
+    color: #ffffff !important;
+    border-bottom: 2px solid var(--primary-salad);
+}
+
+.contact-page .btn-outline-success:hover {
+    background-color: var(--primary-salad) !important;
+    color: var(--background) !important;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 30rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.empty-state h2 {
+    color: var(--primary-light);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.empty-state p {
+    color: var(--accent);
+    font-size: 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer {
+    padding: 2rem 1.25rem;
+    margin-top: 3.75rem;
+    border-top: 0.125rem solid rgba(191, 204, 0, 0.3);
+}
+
+footer p {
+    color: var(--accent);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0.625rem 0 0 0;
+}
+
+@media (max-width: 768px) {
+    .contact-header {
+        min-height: 180px;
+    }
+}
