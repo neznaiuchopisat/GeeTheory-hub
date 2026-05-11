@@ -1,0 +1,220 @@
+/* About Page Styles - Green Theme with Flying Magnifying Glasses */
+
+:root {
+    --primary-green: #4CAF50;
+    --primary-dark: #2E7D32;
+    --primary-light: #81C784;
+    --accent-light: #A5D6A7;
+    --background: #1B5E20;
+    --surface: #2E7D32;
+    --border: #558B2F;
+}
+
+.about-page {
+    background-color: var(--background);
+}
+
+.about-header {
+    border-bottom: 0.1875rem solid var(--primary-green) !important;
+    margin-bottom: 1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    text-align: center;
+    position: relative;
+    background-color: rgba(30, 80, 30, 0.5);
+    width: 100%;
+    overflow: hidden;
+    min-height: 200px;
+}
+
+/* Анимирующиеся лупы */
+.magnifying-glass {
+    position: absolute;
+    opacity: 0.3;
+    animation: floatMagnifier linear infinite;
+}
+
+.magnifying-glass::before {
+    content: '';
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid var(--primary-light);
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.magnifying-glass::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    bottom: -0.75rem;
+    right: -0.75rem;
+    background-color: var(--primary-light);
+    transform: rotate(45deg);
+}
+
+/* Первая лупа - медленная */
+.magnifier-1 {
+    width: 3rem;
+    height: 3rem;
+    top: 10%;
+    left: -3rem;
+    animation: floatMagnifier 25s linear infinite;
+}
+
+/* Вторая лупа - чуть быстрее */
+.magnifier-2 {
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 40%;
+    left: -2.5rem;
+    animation: floatMagnifier 30s linear infinite;
+    animation-delay: 5s;
+}
+
+/* Третья лупа */
+.magnifier-3 {
+    width: 2rem;
+    height: 2rem;
+    top: 70%;
+    left: -2rem;
+    animation: floatMagnifier 28s linear infinite;
+    animation-delay: 10s;
+}
+
+/* Анимация движения луп слева направо */
+@keyframes floatMagnifier {
+    0% {
+        left: -4rem;
+        opacity: 0.2;
+    }
+    10% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    90% {
+        opacity: 0.4;
+    }
+    100% {
+        left: 110vw;
+        opacity: 0.2;
+    }
+}
+
+.about-header img {
+    display: block;
+    margin: 0 auto 1.25rem auto;
+    width: 6.25rem;
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+.about-page h1 {
+    color: var(--primary-light) !important;
+    font-weight: bold !important;
+    text-align: center;
+    text-shadow: 0 0 1.5rem rgba(76, 175, 80, 0.3);
+    position: relative;
+    z-index: 5;
+}
+
+.about-page .navbar {
+    background-color: var(--surface);
+    position: relative;
+    z-index: 10;
+}
+
+.about-page .navbar-brand {
+    color: var(--primary-light) !important;
+}
+
+.about-page .nav-link {
+    color: var(--accent-light) !important;
+}
+
+.about-page .nav-link:hover {
+    color: #FFFFFF !important;
+    border-bottom: 2px solid var(--primary-light);
+}
+
+.about-page .btn-outline-success {
+    color: var(--primary-light) !important;
+    border-color: var(--primary-light) !important;
+}
+
+.about-page .btn-outline-success:hover {
+    background-color: var(--primary-light) !important;
+    color: var(--background) !important;
+}
+
+/* Empty state styles */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 30rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.empty-state h2 {
+    color: var(--primary-light);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.empty-state p {
+    color: var(--accent-light);
+    font-size: 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer {
+    padding: 2rem 1.25rem;
+    margin-top: 3.75rem;
+    border-top: 0.125rem solid var(--border);
+}
+
+footer p {
+    color: var(--accent-light);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0.625rem 0 0 0;
+}
+
+@media (max-width: 768px) {
+    .about-header {
+        min-height: 150px;
+    }
+
+    .magnifying-glass::before {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-width: 1.5px;
+    }
+
+    .magnifying-glass::after {
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+
+    .empty-state {
+        min-height: 20rem;
+        margin: 3rem 0;
+    }
+
+    .empty-state h2 {
+        font-size: 1.5rem;
+    }
+
+    .empty-state p {
+        font-size: 1rem;
+    }
+}
