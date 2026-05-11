@@ -29,11 +29,26 @@
     min-height: 200px;
 }
 
+.about-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(165, 214, 167, 0.08) 0.5rem, transparent 0.6rem),
+        radial-gradient(circle at 80% 30%, rgba(165, 214, 167, 0.06) 0.4rem, transparent 0.5rem),
+        linear-gradient(135deg, rgba(255,255,255,0.02) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.02) 50%, rgba(255,255,255,0.02) 75%, transparent 75%, transparent);
+    background-size: 8rem 8rem, 12rem 12rem, 4rem 4rem;
+    pointer-events: none;
+}
+
 /* Анимирующиеся лупы */
 .magnifying-glass {
     position: absolute;
-    opacity: 0.3;
+    opacity: 0;
     animation: floatMagnifier linear infinite;
+    animation-fill-mode: both;
+    z-index: 2;
 }
 
 .magnifying-glass::before {
@@ -63,7 +78,7 @@
     height: 3rem;
     top: 10%;
     left: -3rem;
-    animation: floatMagnifier 25s linear infinite;
+    animation: floatMagnifier 25s linear infinite both;
 }
 
 /* Вторая лупа - чуть быстрее */
@@ -72,7 +87,7 @@
     height: 2.5rem;
     top: 40%;
     left: -2.5rem;
-    animation: floatMagnifier 30s linear infinite;
+    animation: floatMagnifier 30s linear infinite both;
     animation-delay: 5s;
 }
 
@@ -82,7 +97,7 @@
     height: 2rem;
     top: 70%;
     left: -2rem;
-    animation: floatMagnifier 28s linear infinite;
+    animation: floatMagnifier 28s linear infinite both;
     animation-delay: 10s;
 }
 
