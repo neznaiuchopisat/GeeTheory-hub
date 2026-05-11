@@ -21,7 +21,9 @@
     padding-bottom: 1.25rem;
     text-align: center;
     position: relative;
-    background-color: rgba(30, 80, 30, 0.5);
+    background: rgba(30, 80, 30, 0.5);
+    background-image: none;
+    animation: none;
     width: 100%;
     overflow: hidden;
     min-height: 200px;
