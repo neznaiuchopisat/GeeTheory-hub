@@ -23,8 +23,6 @@
     text-align: center;
     position: relative;
     background: linear-gradient(180deg, rgba(191, 204, 0, 0.18), rgba(217, 235, 154, 0.18));
-    background-image: none;
-    animation: none;
     width: 100%;
     overflow: hidden;
     min-height: 220px;
@@ -36,11 +34,151 @@
     inset: 0;
     z-index: 1;
     background-image:
-        radial-gradient(circle at 20% 20%, rgba(191, 204, 0, 0.12) 0.5rem, transparent 0.7rem),
-        radial-gradient(circle at 80% 80%, rgba(217, 235, 154, 0.1) 0.4rem, transparent 0.6rem),
-        linear-gradient(135deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.02) 75%, transparent 75%, transparent);
-    background-size: 8rem 8rem, 10rem 10rem, 4rem 4rem;
+        /* Вертикальные линии (столбцы) */
+        linear-gradient(90deg,
+            transparent 0%,
+            transparent calc(14.28% - 2px),
+            rgba(191, 204, 0, 0.3) calc(14.28% - 2px),
+            rgba(191, 204, 0, 0.3) calc(14.28% + 2px),
+            transparent calc(14.28% + 2px),
+            transparent calc(28.56% - 2px),
+            rgba(191, 204, 0, 0.3) calc(28.56% - 2px),
+            rgba(191, 204, 0, 0.3) calc(28.56% + 2px),
+            transparent calc(28.56% + 2px),
+            transparent calc(42.84% - 2px),
+            rgba(191, 204, 0, 0.3) calc(42.84% - 2px),
+            rgba(191, 204, 0, 0.3) calc(42.84% + 2px),
+            transparent calc(42.84% + 2px),
+            transparent calc(57.12% - 2px),
+            rgba(191, 204, 0, 0.3) calc(57.12% - 2px),
+            rgba(191, 204, 0, 0.3) calc(57.12% + 2px),
+            transparent calc(57.12% + 2px),
+            transparent calc(71.4% - 2px),
+            rgba(191, 204, 0, 0.3) calc(71.4% - 2px),
+            rgba(191, 204, 0, 0.3) calc(71.4% + 2px),
+            transparent calc(71.4% + 2px),
+            transparent calc(85.68% - 2px),
+            rgba(191, 204, 0, 0.3) calc(85.68% - 2px),
+            rgba(191, 204, 0, 0.3) calc(85.68% + 2px),
+            transparent calc(85.68% + 2px)
+        );
+    background-attachment: fixed;
     pointer-events: none;
+}
+
+.floating-phone,
+.floating-letter {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.45;
+    font-weight: bold;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    color: rgba(191, 204, 0, 0.7);
+}
+
+/* Первая телефонная трубка */
+.floating-icons .floating-phone:nth-child(1) {
+    animation: float-down-left 8s linear infinite -3.5s;
+    right: 30%;
+}
+
+/* Первое письмо */
+.floating-icons .floating-letter:nth-child(2) {
+    animation: float-down-right 7s linear infinite -2.8s;
+    right: 20%;
+}
+
+/* Вторая телефонная трубка */
+.floating-icons .floating-phone:nth-child(3) {
+    animation: float-down-center-left 9s linear infinite -4.5s;
+    left: 35%;
+}
+
+/* Второе письмо */
+.floating-icons .floating-letter:nth-child(4) {
+    animation: float-down-right 8s linear infinite -2s;
+    left: 10%;
+}
+
+/* Третья телефонная трубка */
+.floating-icons .floating-phone:nth-child(5) {
+    animation: float-down-left 7.5s linear infinite -4s;
+    right: 7%;
+}
+
+/* Третье письмо */
+.floating-icons .floating-letter:nth-child(6) {
+    animation: float-down-center-right 9.5s linear infinite -3.8s;
+    left: 50%;
+}
+
+@keyframes float-down-left {
+    0% {
+        transform: translateY(-50px) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.45;
+    }
+    95% {
+        opacity: 0.45;
+    }
+    100% {
+        transform: translateY(250px) translateX(-30px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes float-down-right {
+    0% {
+        transform: translateY(-50px) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.45;
+    }
+    95% {
+        opacity: 0.45;
+    }
+    100% {
+        transform: translateY(250px) translateX(30px) rotate(-360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes float-down-center-left {
+    0% {
+        transform: translateY(-50px) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.45;
+    }
+    95% {
+        opacity: 0.45;
+    }
+    100% {
+        transform: translateY(250px) translateX(-40px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes float-down-center-right {
+    0% {
+        transform: translateY(-50px) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.45;
+    }
+    95% {
+        opacity: 0.45;
+    }
+    100% {
+        transform: translateY(250px) translateX(40px) rotate(-360deg);
+        opacity: 0;
+    }
 }
 
 .contact-header img {
