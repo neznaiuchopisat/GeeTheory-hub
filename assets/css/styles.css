@@ -1,3 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    /*overflow-x: hidden; /* Прячет прокрутку, если что-то всё же вылезло */
+}
+
 html {
     font-size: 16px;
 }
@@ -166,12 +175,14 @@ table {
 
 /* Обновленный блок поиска */
 .navbar .d-flex {
-    flex: 0 0 15vw !important; /* Базовая ширина в 18% экрана */
+    flex: 0 1 auto !important; /* Разрешаем блоку сжиматься (1), если места мало */
     min-width: 160px !important; /* Поиск не станет уже 160 даже на маленьком экране */
     display: flex !important;
     gap: 0.5vw !important;
     margin-left: 1.5vw !important; /* Отступ от ссылок до поиска */
     /* Самый крайний отступ от экрана регулируется padding-right в .container-fluid */
+    max-width: 25vw; /* Ограничиваем максимальную ширину */
+    min-width: 150px; /* Но не даем стать совсем крошечным */
 
 }
 
