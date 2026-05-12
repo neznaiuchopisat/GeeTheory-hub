@@ -42,84 +42,102 @@
     pointer-events: none;
 }
 
-/* Анимирующиеся лупы */
+/* Общие стили для всех луп */
 .magnifying-glass {
     position: absolute;
-    opacity: 0;
-    animation: floatMagnifier linear infinite;
-    animation-fill-mode: both;
+    width: 3.5rem;
+    height: 3.5rem;
     z-index: 2;
+    /* Важно: начальное состояние за пределами экрана слева */
+    left: -5rem; 
+    opacity: 0;
+    pointer-events: none;
+    /* Привязываем анимацию здесь, чтобы она наследовалась */
+    animation-name: floatAbout;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
+/* Стекло (Линза) */
 .magnifying-glass::before {
     content: '';
     position: absolute;
-    width: 3rem;
-    height: 3rem;
-    border: 2px solid var(--primary-light);
+    top: 0;
+    left: 0;
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 3px solid var(--primary-light);
     border-radius: 50%;
-    background-color: transparent;
+    background: rgba(165, 214, 167, 0.2);
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.3);
+    z-index: 2;
 }
 
+/* Ручка (Тонкая и длинная) */
 .magnifying-glass::after {
     content: '';
     position: absolute;
-    width: 1rem;
-    height: 1rem;
-    bottom: -0.75rem;
-    right: -0.75rem;
+    /* Смещаем начало ручки чуть дальше к краю кольца */
+    top: 1.95rem; 
+    left: 1.95rem; 
+    width: 0.35rem; /* Делаем ручку тоньше */
+    height: 1.4rem; /* Делаем ручку длиннее */
     background-color: var(--primary-light);
-    transform: rotate(45deg);
+    /* Разворачиваем строго по диагонали от центра */
+    transform: rotate(-45deg); 
+    transform-origin: 0 0; /* Точка вращения в верхнем левом углу самой ручки */
+    border-radius: 4px; /* Закругляем кончик ручки */
+    z-index: 1;
 }
 
-/* Первая лупа - медленная */
+/* Индивидуальные настройки для каждой лупы */
+
+/* Медленная и плавная */
 .magnifier-1 {
-    width: 3rem;
-    height: 3rem;
-    top: 10%;
-    left: -3rem;
-    animation: floatMagnifier 25s linear infinite both;
+    top: 15%;
+    animation: floatRandom1 22s linear infinite;
+    animation-delay: 0s;
 }
 
-/* Вторая лупа - чуть быстрее */
+/* Быстрая и с отклонением вверх */
 .magnifier-2 {
-    width: 2.5rem;
-    height: 2.5rem;
-    top: 40%;
-    left: -2.5rem;
-    animation: floatMagnifier 30s linear infinite both;
-    animation-delay: 5s;
+    top: 45%;
+    animation: floatRandom2 15s linear infinite;
+    animation-delay: 4s; /* Вылетит чуть позже */
 }
 
-/* Третья лупа */
+/* Средняя скорость и отклонение вниз */
 .magnifier-3 {
-    width: 2rem;
-    height: 2rem;
-    top: 70%;
-    left: -2rem;
-    animation: floatMagnifier 28s linear infinite both;
-    animation-delay: 10s;
+    top: 75%;
+    animation: floatRandom3 19s linear infinite;
+    animation-delay: 10s; /* Вылетит значительно позже */
 }
 
-/* Анимация движения луп слева направо */
-@keyframes floatMagnifier {
-    0% {
-        left: -4rem;
-        opacity: 0.2;
-    }
-    10% {
-        opacity: 0.4;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    90% {
-        opacity: 0.4;
-    }
-    100% {
-        left: 110vw;
-        opacity: 0.2;
-    }
+/* Анимация 1: Почти прямая траектория */
+@keyframes floatRandom1 {
+    0% { left: -10%; opacity: 0; transform: translateY(0) rotate(0deg); }
+    10% { opacity: 0.5; }
+    50% { transform: translateY(-10px) rotate(5deg); }
+    90% { opacity: 0.5; }
+    100% { left: 115%; opacity: 0; transform: translateY(0) rotate(10deg); }
+}
+
+/* Анимация 2: Быстрая, "всплывающая" вверх */
+@keyframes floatRandom2 {
+    0% { left: -10%; opacity: 0; transform: translateY(0) rotate(0deg); }
+    10% { opacity: 0.6; }
+    50% { transform: translateY(-40px) rotate(-15deg); } /* Забирает вверх */
+    90% { opacity: 0.6; }
+    100% { left: 115%; opacity: 0; transform: translateY(-20px) rotate(-5deg); }
+}
+
+/* Анимация 3: Тяжелая, "тонущая" вниз */
+@keyframes floatRandom3 {
+    0% { left: -10%; opacity: 0; transform: translateY(0) rotate(0deg); }
+    10% { opacity: 0.4; }
+    50% { transform: translateY(30px) rotate(20deg); } /* Уходит вниз */
+    90% { opacity: 0.4; }
+    100% { left: 115%; opacity: 0; transform: translateY(15px) rotate(30deg); }
 }
 
 .about-header img {
