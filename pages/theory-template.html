@@ -24,14 +24,12 @@
         }
 
         #theory-name {
-            /* Лека сянка, която помага на текста да изпъкне върху всякакъв фон */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
             font-size: 2.5rem;
             margin: 0;
-            transition: color 0.5s ease; /* Плавна смяна на цвета */
+            transition: color 0.5s ease;
         }
 
-        /* Допълнителен стил за описанието, за да е четимо */
         #theory-description {
             font-size: 1.1rem;
             line-height: 1.7;
@@ -42,14 +40,14 @@
     <div class="theory-content" id="theory-box">
         <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 20px;">
             <img id="game-icon" src="" alt="" style="display: none;">
-            <h1 id="theory-name" style="margin: 0;">Заглавие</h1>
+            <!-- Важно: Тук ID-то е правилно -->
+            <h1 id="theory-name" style="margin: 0;">Теория не е намерена\ е в процес на добавянето</h1>
         </div>
         <hr id="theory-hr" style="border: 0; border-top: 2px solid var(--primary-blue); margin-bottom: 20px;">
-        <div id="theory-description">
-            <!-- Тук ще се появи текстът -->
-        </div>
+        <div id="theory-description"></div>
         <br>
-        <a href="books.html" style="color: inherit; text-decoration: underline; font-weight: bold;">← Върни се в библиотеката</a>
+        <!-- ДОБАВИ КЛАСА back-link ТУК -->
+        <a href="books.html" class="back-link" style="color: inherit; text-decoration: underline; font-weight: bold;">← Върни се в библиотеката</a>
     </div>
 
     <script src="../assets/js/theories.js"></script>
@@ -59,7 +57,6 @@
         const theoryId = params.get('id');
         const data = theoriesData[theoryId];
 
-        // Функция за интелигентен контраст
         function getContrastColor(hexcolor) {
             if (!hexcolor || hexcolor === "transparent") return "white";
             const cleanHex = hexcolor.replace('#', '');
@@ -73,45 +70,38 @@
         if (data) {
             const box = document.getElementById('theory-box');
             const title = document.getElementById('theory-name');
+            const description = document.getElementById('theory-description');
             const icon = document.getElementById('game-icon');
-            const hr = document.getElementById('theory-hr');
 
-            // Попълване на текст
-            title.innerText = data.title;
-            document.getElementById('theory-description').innerHTML = data.content;
+            // 1. Попълване на съдържанието
+            if (title) title.innerText = data.title;
+            if (description) description.innerHTML = data.content;
             document.title = data.title;
 
-            // Икона
+            // 2. Икона (добавихме логиката за показване)
             if (data.icon && icon) {
                 icon.src = data.icon;
                 icon.style.display = "block";
             }
 
-            // ПРИЛАГАНЕ НА ЦВЕТОВЕ (с прескачане на CSS ограниченията)
-            if (data.accentColor) {
-                // Сменяме фона
+            // 3. Цветове и контраст
+            if (data.accentColor && box) {
                 box.style.setProperty('background-color', data.accentColor, 'important');
-                
-                // Изчисляваме контрастния цвят (черен или бял)
                 const textColor = getContrastColor(data.accentColor);
                 
-                // Налагаме цвета върху заглавието и текста със сила (!important)
-                title.style.setProperty('color', textColor, 'important');
-                box.style.setProperty('color', textColor, 'important');
-
-                // Оправяме и линка за връщане
-                const backLink = document.querySelector('.back-link') || document.querySelector('a[href*="books.html"]');
-                if (backLink) {
-                    backLink.style.setProperty('color', textColor, 'important');
-                }
+                if (title) title.style.setProperty('color', textColor, 'important');
+                if (description) description.style.setProperty('color', textColor, 'important');
+                
+                // Сега back-link ще работи, защото го добавихме в HTML-а по-горе
+                const backLink = box.querySelector('.back-link');
+                if (backLink) backLink.style.setProperty('color', textColor, 'important');
             }
-
+            
             if (data.borderColor) {
+                const hr = document.getElementById('theory-hr');
                 box.style.setProperty('border-color', data.borderColor, 'important');
-                if (hr) hr.style.setProperty('border-color', data.borderColor, 'important');
+                if (hr) hr.style.setProperty('border-top-color', data.borderColor, 'important');
             }
-        } else {
-            document.getElementById('theory-name').innerText = "Теорията не е намерена";
         }
     };
     </script>

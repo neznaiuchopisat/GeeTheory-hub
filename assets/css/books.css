@@ -48,11 +48,16 @@
 }
 
 .books-page h1 {
-    color: var(--primary-light);
+    color: var(--primary-blue);
     font-weight: bold !important;
     text-align: center;
     text-shadow: 0 0 1.5rem rgba(74, 159, 221, 0.3);
 }
+
+.books-page h1:not(#theory-name) {
+    color: var(--primary-blue) !important;
+}
+
 
 .books-page .navbar {
     background-color: var(--surface);
