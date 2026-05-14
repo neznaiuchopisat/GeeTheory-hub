@@ -230,6 +230,12 @@ table {
     margin-bottom: 0 !important; /* Убирает возможные отступы */
 }
 
+.nav-link:hover {
+    color: #ffffff !important;
+    text-decoration: underline;
+    text-decoration-color: #816FD1;
+}
+
 a {
 
     color: #816FD1 !important;
@@ -473,4 +479,42 @@ a:hover {
     color: #ffffff !important;
     text-decoration: none !important;
     transform: translateY(-3px);
+}
+
+/* ===== ACTIVE NAVIGATION LINKS BY PAGE ===== */
+
+/* Index page (main theme) */
+.nav-link.active {
+    color: #816FD1 !important;
+    border-bottom: 3px solid #816FD1 !important;
+}
+
+/* Books page */
+.books-page .nav-link.active {
+    color: var(--primary-light) !important;
+    border-bottom: 3px solid var(--primary-light) !important;
+}
+
+/* Popular page */
+.popular-page .nav-link.active {
+    color: var(--primary-light) !important;
+    border-bottom: 3px solid var(--primary-light) !important;
+}
+
+/* Random theory page */
+.random-page .nav-link.active {
+    color: var(--primary-yellow) !important;
+    border-bottom: 3px solid var(--primary-yellow) !important;
+}
+
+/* About page */
+.about-page .nav-link.active {
+    color: var(--primary-light) !important;
+    border-bottom: 3px solid var(--primary-light) !important;
+}
+
+/* Contact page */
+.contact-page .nav-link.active {
+    color: var(--primary-salad) !important;
+    border-bottom: 3px solid var(--primary-salad) !important;
 }
