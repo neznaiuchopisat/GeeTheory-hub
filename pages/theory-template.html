@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title id="page-title">Очакване на теория...</title>
+    <link rel="stylesheet" href="css/books.css"> <!-- Используем те же стили -->
+    <style>
+        .theory-content {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            color: white;
+            background: var(--surface);
+            border: 2px solid var(--primary-blue);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="books-page">
+    <div class="theory-content">
+        <h1 id="theory-name">Название на теорията</h1>
+        <hr>
+        <div id="theory-description">
+            <!-- Сюда вставится текст из JS -->
+        </div>
+        <br>
+        <a href="books.html" style="color: var(--primary-light)">←Върни се в библиотеката</a>
+    </div>
+
+    <script src="js/theories.js"></script>
+    <script>
+        // Скрипт для получения ID из URL и отображения данных
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const theoryId = params.get('id'); // Получаем например 'fnaf'
+
+            if (theoryId && theoriesData[theoryId]) {
+                const data = theoriesData[theoryId];
+                document.getElementById('page-title').innerText = data.title;
+                document.getElementById('theory-name').innerText = data.title;
+                document.getElementById('theory-description').innerHTML = data.content;
+            } else {
+                document.getElementById('theory-name').innerText = "Теория не е намерена";
+            }
+        };
+    </script>
+</body>
+</html>
