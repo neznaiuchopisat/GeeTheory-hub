@@ -94,11 +94,12 @@
     box-shadow: 0 0 0 0.25rem rgba(247, 255, 138, 0.443) !important;
 }
 
-.random-page .nav-link:hover,
+/* Random theory page */
 .random-page .nav-link.active {
-    color: #ffffff !important;
-    border-bottom: 2px solid var(--primary-yellow);
+    color: var(--primary-yellow) !important;
+    border-bottom: 3px solid var(--primary-yellow) !important;
 }
+
 
 .random-page .btn-outline-success:hover {
     background-color: var(--primary-yellow) !important;

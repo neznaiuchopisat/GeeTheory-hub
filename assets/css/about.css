@@ -177,6 +177,7 @@
     border-bottom: 2px solid var(--primary-light);
 }
 
+/* About page */
 .about-page .nav-link.active {
     color: var(--primary-light) !important;
     border-bottom: 3px solid var(--primary-light) !important;

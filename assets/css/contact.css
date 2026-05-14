@@ -211,10 +211,15 @@
     color: var(--accent) !important;
 }
 
-.contact-page .nav-link:hover,
-.contact-page .nav-link.active {
+.contact-page .nav-link:hover {
     color: #ffffff !important;
     border-bottom: 2px solid var(--primary-salad);
+}
+
+/* Contact page */
+.contact-page .nav-link.active {
+    color: var(--primary-salad) !important;
+    border-bottom: 3px solid var(--primary-salad) !important;
 }
 
 .contact-page .btn-outline-success {
