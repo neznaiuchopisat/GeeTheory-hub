@@ -216,12 +216,6 @@
     border-bottom: 2px solid var(--primary-salad);
 }
 
-/* Contact page */
-.contact-page .nav-link.active {
-    color: var(--primary-salad) !important;
-    border-bottom: 3px solid var(--primary-salad) !important;
-}
-
 .contact-page .btn-outline-success {
     color: #BFCC00 !important;
     border-color: #BFCC00 !important;
@@ -280,4 +274,3 @@ footer p {
         min-height: 180px;
     }
 }
-

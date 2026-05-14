@@ -177,12 +177,6 @@
     border-bottom: 2px solid var(--primary-light);
 }
 
-/* About page */
-.about-page .nav-link.active {
-    color: var(--primary-light) !important;
-    border-bottom: 3px solid var(--primary-light) !important;
-}
-
 .about-page .btn-outline-success:focus,
 .about-page .btn-outline-success.active {
     background-color: #4CAF50 !important;

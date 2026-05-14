@@ -86,12 +86,6 @@
     color: var(--background) !important;
 }
 
-/* Books page */
-.books-page .nav-link.active {
-    color: var(--primary-light) !important;
-    border-bottom: 3px solid var(--primary-light) !important;
-}
-
 .books-page .btn-outline-success:focus,
 .books-page .btn-outline-success.active {
     box-shadow: 0 0 0 0.25rem #53b7ff !important;

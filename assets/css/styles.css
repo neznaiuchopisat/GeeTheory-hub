@@ -436,8 +436,6 @@ a:hover {
     }
 }
 
-
-
 @keyframes brandPulse {
     0%, 100% {
         transform: scale(1);
@@ -445,7 +443,7 @@ a:hover {
     }
     50% {
         transform: scale(1.05);
-        text-shadow: 0 0 0.7vw rgba(129, 111, 209, 0.6);
+        text-shadow: 0 0 0.7vw rgba(0, 0, 0, 0.6);
     }
 }
 
@@ -481,18 +479,40 @@ a:hover {
     transform: translateY(-3px);
 }
 
+/* ===== ACTIVE NAVIGATION LINKS BY PAGE ===== */
+
 /* Index page (main theme) */
 .nav-link.active {
     color: #816FD1 !important;
     border-bottom: 3px solid #816FD1 !important;
 }
 
+/* Books page - blue theme */
+.books-page .nav-link.active {
+    color: var(--primary-light) !important;
+    border-bottom: 3px solid var(--primary-light) !important;
+}
 
+/* Popular page - red theme */
+.popular-page .nav-link.active {
+    color: var(--primary-light) !important;
+    border-bottom: 3px solid var(--primary-light) !important;
+}
 
+/* Random theory page - yellow theme */
+.random-page .nav-link.active {
+    color: var(--primary-yellow) !important;
+    border-bottom: 3px solid var(--primary-yellow) !important;
+}
 
+/* About page - green theme */
+.about-page .nav-link.active {
+    color: var(--primary-light) !important;
+    border-bottom: 3px solid var(--primary-light) !important;
+}
 
-
-
-
-
-
+/* Contact page - salad yellow-green theme */
+.contact-page .nav-link.active {
+    color: var(--primary-salad) !important;
+    border-bottom: 3px solid var(--primary-salad) !important;
+}
