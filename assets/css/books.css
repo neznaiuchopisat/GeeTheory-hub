@@ -344,6 +344,18 @@
     border-radius: 0.125rem;
 }
 
+/* Исправленный блок для ссылок-книг */
+.book-link {
+    display: contents; /* Это убирает влияние ссылки на верстку, оставляя её кликабельной */
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+/* Дополнительно: чтобы при наведении вся книга реагировала */
+.book-link:hover {
+    text-decoration: none;
+}
+
 /* Пустое место */
 .book-empty {
     width: 2.5rem;
