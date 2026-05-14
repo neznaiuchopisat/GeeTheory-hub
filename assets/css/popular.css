@@ -85,6 +85,12 @@
     color: var(--background) !important;
 }
 
+.popular-page .btn-outline-success:focus,
+.popular-page .btn-outline-success.active {
+    border-color: #E53E3E !important;
+    box-shadow: 0 0 0 0.25rem #9c4c4c !important;
+}
+
 /* Empty state styles */
 .empty-state {
     display: flex;

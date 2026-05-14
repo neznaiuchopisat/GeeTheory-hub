@@ -82,7 +82,16 @@
 .random-page .navbar-brand,
 .random-page .nav-link,
 .random-page .btn-outline-success {
-    color: var(--accent) !important;
+    color: #BFCC00 !important;
+    border-color: #BFCC00 !important;
+}
+
+.random-page .btn-outline-success:focus,
+.random-page .btn-outline-success.active {
+    background-color: #f7c948 !important;
+    border-color: #f7c948 !important;
+    color: rgb(118, 82, 41) !important;
+    box-shadow: 0 0 0 0.25rem rgba(247, 255, 138, 0.443) !important;
 }
 
 .random-page .nav-link:hover,

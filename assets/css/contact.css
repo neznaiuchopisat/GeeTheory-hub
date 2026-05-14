@@ -217,6 +217,19 @@
     border-bottom: 2px solid var(--primary-salad);
 }
 
+.contact-page .btn-outline-success {
+    color: #BFCC00 !important;
+    border-color: #BFCC00 !important;
+}
+
+.contact-page .btn-outline-success:focus,
+.contact-page .btn-outline-success.active {
+    background-color: #BFCC00 !important;
+    border-color: #BFCC00 !important;
+    color: #4A5F1F !important;
+    box-shadow: 0 0 0 0.25rem rgba(191, 204, 0, 0.14) !important;
+}
+
 .contact-page .btn-outline-success:hover {
     background-color: var(--primary-salad) !important;
     color: var(--background) !important;
@@ -262,3 +275,4 @@ footer p {
         min-height: 180px;
     }
 }
+

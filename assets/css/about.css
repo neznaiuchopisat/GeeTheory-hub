@@ -177,6 +177,14 @@
     border-bottom: 2px solid var(--primary-light);
 }
 
+.about-page .btn-outline-success:focus,
+.about-page .btn-outline-success.active {
+    background-color: #4CAF50 !important;
+    border-color: #4CAF50 !important;
+    color: #1B5E20 !important;
+    box-shadow: 0 0 0 0.25rem #45914a !important;
+}
+
 .about-page .btn-outline-success {
     color: var(--primary-light) !important;
     border-color: var(--primary-light) !important;
