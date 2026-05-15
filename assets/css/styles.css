@@ -1,11 +1,134 @@
+<<<<<<< Updated upstream
 html {
     font-size: 16px;
+=======
+/*header style*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+header img {
+    height: 120px; /* Зафиксируй высоту */
+    width: auto;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 20px var(--primary); /* То самое свечение */
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+.navbar {
+    width: 100%;
+    background-color: var(--surface) !important;
+    border-bottom: 2px solid var(--border);
+}
+
+/* text glowing and stuff*/
+
+.glow-text {
+    color: #fff;
+    text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
+    }
+    to {
+        text-shadow: 0 0 15px var(--primary), 0 0 30px var(--primary-light), 0 0 40px var(--primary-light);
+    }
+}
+
+/* =========================================
+   1. ПЕРЕМЕННЫЕ И ТЕМЫ (Тот самый "движок")
+   ========================================= */
+
+/* Тема по умолчанию (INDEX - Фиолетовая) */
+:root, .index-page {
+    --primary: #816FD1;
+    --primary-dark: #221F33;
+    --primary-light: #7D74A7;
+    --background: #1C1633;
+    --surface: #26213c;
+    --accent: #ffffff;
+    --text-muted: #6E6B7C;
+    --border: #312b4d;
+}
+
+/* Переопределение для других страниц */
+.about-page {
+    --primary: #4CAF50;
+    --primary-dark: #1B5E20;
+    --primary-light: #81C784;
+    --background: #1B5E20;
+    --surface: #2E7D32;
+    --border: #558B2F;
+}
+
+.books-page {
+    --primary: #2E7BB4;
+    --primary-dark: #1C3A52;
+    --primary-light: #4A9FDD;
+    --background: #0F1E2E;
+    --surface: #1A2F42;
+    --border: #2A4A66;
+}
+
+.popular-page {
+    --primary: #E53E3E;
+    --primary-dark: #742A2A;
+    --primary-light: #FC8181;
+    --background: #2D0F0F;
+    --surface: #3D1515;
+    --border: #6B2C2C;
+}
+
+.contact-page {
+    --primary: #BFCC00;
+    --primary-dark: #8FA000;
+    --primary-light: #D9EB9A;
+    --background: #2D3D16;
+    --surface: #4A5F1F;
+    --border: #BFCC00;
+}
+
+.random-page {
+    --primary: #f39c12;
+    --primary-dark: #b66f08;
+    --primary-light: #f7c948;
+    --background: #1a1209;
+    --surface: #3c2f10;
+    --border: #f7c948;   
+}
+
+/* =========================================
+   2. ГЛОБАЛЬНЫЕ СТИЛИ (Общие для всех)
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+>>>>>>> Stashed changes
 }
 
 body {
-    background-color: #1C1633;
-    margin: 0;
-    padding: 0;
+    background-color: var(--background);
+    color: var(--accent);
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+h1, h2, h3 {
+    color: var(--primary);
+    font-family: 'Gabriela', serif;
 }
 
 .page-wrapper {
@@ -14,6 +137,7 @@ body {
     padding: 0 1.25rem;
 }
 
+<<<<<<< Updated upstream
 h1 {
     color: #816FD1;
     font-size: 2.5rem;
@@ -159,143 +283,570 @@ table {
 
 .navbar .d-flex {
     flex: 0 0 auto !important;
+=======
+/* =========================================
+   3. ОБЩИЕ КОМПОНЕНТЫ (Используют переменные)
+   ========================================= */
+
+/* Навигация */
+.nav-link {
+    color: var(--accent) !important;
+    transition: 0.3s;
 }
 
-a {
-
-    color: #816FD1 !important;
-
+.nav-link.active {
+    color: var(--primary) !important;
+    border-bottom: 2px solid var(--primary);
+>>>>>>> Stashed changes
 }
 
-.gabriela-regular {
-    font-family: "Gabriela", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.montserrat-regular {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-}
-  
-
-* {
-    font-family: Gabriela; 
- }
-
-/* Dropdown menu positioning */
-.dropdown-menu {
-    margin-top: 0 !important;
-    top: 100% !important;
-}
-
-/* Search button styling */
+/* Кнопки */
 .btn-outline-success {
-    color: #816FD1 !important;
-    border-color: #816FD1 !important;
+    color: var(--primary-light) !important;
+    border-color: var(--primary-light) !important;
 }
 
 .btn-outline-success:hover {
-    background-color: #816FD1 !important;
-    color: #1C1633 !important;
+    background-color: var(--primary-light) !important;
+    color: var(--background) !important;
 }
 
-.btn-outline-success:active,
-.btn-outline-success:focus,
-.btn-outline-success.active {
-    background-color: #816FD1 !important;
-    border-color: #816FD1 !important;
-    color: #1C1633 !important;
-    box-shadow: 0 0 0 0.25rem rgba(129, 111, 209, 0.5) !important;
-}
-
-/* Fandom-style layout */
-section {
-    margin: 1.25rem 0;
-    padding: 1.25rem 0;
-}
-
-article {
-    background-color: #221F33;
-    border: 0.125rem solid #423F52;
-    border-radius: 0.5rem;
-    padding: 1.25rem;
-    margin-bottom: 1.25rem;
-    box-shadow: 0 0.25rem 0.5rem rgba(129, 111, 209, 0.1);
-    transition: all 0.3s ease;
-}
-
-article:hover {
-    border-color: #816FD1;
-    box-shadow: 0 0.375rem 0.75rem rgba(129, 111, 209, 0.2);
-    transform: translateY(-0.125rem);
-}
-
-article h3 {
-    border-bottom: 0.125rem solid #816FD1;
-    padding-bottom: 0.625rem;
-    margin-bottom: 0.9375rem;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.0625rem;
-}
-
-article h4 {
-    color: #816FD1 !important;
-    margin-top: 0.9375rem;
-    margin-bottom: 0.625rem;
-    border-left: 0.1875rem solid #816FD1;
-    padding-left: 0.625rem;
-}
-
-main {
-    max-width: 100%;
-    margin: 1.25rem 0;
-    padding: 0;
-}
-
-.container {
-    background-color: #221F33;
-    border: 0.125rem solid #423F52;
-    border-radius: 0.5rem;
-    padding: 1.25rem;
-    margin-bottom: 1.25rem;
-    box-shadow: 0 0.25rem 0.5rem rgba(129, 111, 209, 0.1);
-}
-
-header {
-    border-bottom: 0.1875rem solid #816FD1;
-    margin-bottom: 1.25rem;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+/* Секция "Пусто" (избыточный код теперь тут в одном экземпляре) */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 30rem;
     text-align: center;
+}
+
+.empty-state h2 { color: var(--primary-light); }
+
+/* Футер */
+footer {
+    padding: 2rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.theory-template .theory-content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    color: white;
+    background: var(--surface); /* Теперь будет брать цвет темы! */
+    border: 3px solid var(--primary);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.theory-template #game-icon {
+    width: 50px;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+}
+
+.theory-template #theory-name {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    font-size: 2.5rem;
+    font-family: 'Gabriela', serif;
+}
+
+.bookshelf-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70rem;
+    margin: 2.5rem 0;
+    padding: 2.5rem 0;
+}
+
+.bookshelf {
     position: relative;
-    background: 
-        repeating-linear-gradient(45deg, transparent, transparent 0.625rem, rgba(129, 111, 209, 0.1) 0.625rem, rgba(129, 111, 209, 0.1) 1.25rem),
-        repeating-linear-gradient(-45deg, transparent, transparent 0.625rem, rgba(129, 111, 209, 0.05) 0.625rem, rgba(129, 111, 209, 0.05) 1.25rem);
-    background-size: 1.7675rem 1.7675rem;
-    animation: patternShift 20s linear infinite;
+    width: 100%;
+    max-width: 90rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.bookshelf-shelf {
+    position: relative;
+    min-height: 12rem;
+    background: linear-gradient(180deg, rgba(42, 74, 102, 0.3) 0%, rgba(30, 50, 70, 0.5) 50%, rgba(20, 30, 40, 0.8) 100%);
+    border-top: 0.25rem solid var(--primary-blue);
+    border-bottom: 0.5rem solid var(--primary-dark);
+    box-shadow: 
+        inset 0 0.125rem 0.5rem rgba(74, 159, 221, 0.1),
+        inset 0 -0.125rem 0.5rem rgba(0, 0, 0, 0.5),
+        0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 1.25rem;
+    gap: 0;
+    overflow: visible;
+    padding-bottom: 1.5rem;
+}
+
+/* Вертикальная книга */
+.book-vertical {
+    position: relative;
+    height: 8.5rem;
+    width: 2.2rem;
+    border-radius: 0.125rem;
+    box-shadow: 
+        -0.25rem 0.5rem 1rem rgba(0, 0, 0, 0.5),
+        inset 0.125rem 0 0.25rem rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.book-vertical:hover {
+    transform: translateY(-0.5rem) scale(1.25);
+    z-index: 100;
+
+    box-shadow: 
+        -0.5rem 1rem 2rem rgba(0, 0, 0, 0.7),
+        inset 0.125rem 0 0.25rem rgba(255, 255, 255, 0.2);
+}
+
+.book-vertical .book-title {
+    font-size: 0.85rem;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: #FFFFFF;
+    text-shadow: 
+        -1px -1px 2px rgba(0, 0, 0, 0.9),
+        1px -1px 2px rgba(0, 0, 0, 0.9),
+        -1px 1px 2px rgba(0, 0, 0, 0.9),
+        1px 1px 2px rgba(0, 0, 0, 0.9),
+        0 0 4px rgba(0, 0, 0, 0.95);
+    max-width: 100%;
+    padding: 0.25rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0.125rem;
+}
+
+/* Горизонтальная книга */
+.book-horizontal {
+    position: relative;
+    height: 2.2rem;
+    width: 8.5rem;
+    border-radius: 0.125rem;
+    box-shadow: 
+        0 0.25rem 0.75rem rgba(0, 0, 0, 0.6),
+        inset 0 0.125rem 0.25rem rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+    margin-bottom: 0;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.book-horizontal:hover {
+    transform: translateY(-0.5rem) scale(1.25);
+    z-index: 100;
+    
+    box-shadow: 
+        0 0.5rem 1.25rem rgba(0, 0, 0, 0.7),
+        inset 0.125rem 0 0.25rem rgba(255, 255, 255, 0.2);
+}
+
+.book-horizontal .book-title {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: 
+        -1px -1px 2px rgba(0, 0, 0, 0.9),
+        1px -1px 2px rgba(0, 0, 0, 0.9),
+        -1px 1px 2px rgba(0, 0, 0, 0.9),
+        1px 1px 2px rgba(0, 0, 0, 0.9),
+        0 0 4px rgba(0, 0, 0, 0.95);
+    max-width: 90%;
+    writing-mode: horizontal-tb;
+    padding: 0.2rem 0.4rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0.125rem;
+}
+
+/* Горизонтальные стопки */
+.book-horizontal-stack {
+    position: relative;
+    height: auto;
+    width: 8.5rem;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.book-horizontal-stack .book-horizontal {
+    margin-right: 0;
+    margin-bottom: 0;
     width: 100%;
 }
 
-header img {
-    display: block;
-    margin: 0 auto 1.25rem auto;
-    width: 6.25rem;
-    height: auto;
+/* Наклоненная книга (слеш /) */
+.book-slash {
+    position: relative;
+    height: 8.5rem;
+    width: 2.2rem;
+    border-radius: 0.125rem;
+    box-shadow: 
+        -0.25rem 0.5rem 1rem rgba(0, 0, 0, 0.5),
+        inset 0.125rem 0 0.25rem rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+    transform: rotate(15deg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-origin: center;
 }
 
-@keyframes patternShift {
-    0% {
-        background-position: 0 0;
+.book-slash:hover {
+    transform: rotate(0deg) translateY(-0.5rem) scale(1.25);
+    z-index: 100;
+    
+    box-shadow: 
+        -0.5rem 1rem 2rem rgba(0, 0, 0, 0.7),
+        inset 0.125rem 0 0.25rem rgba(255, 255, 255, 0.2);
+}
+
+.book-slash .book-title {
+    font-size: 0.85rem;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: #FFFFFF;
+    text-shadow: 
+        -1px -1px 2px rgba(0, 0, 0, 0.9),
+        1px -1px 2px rgba(0, 0, 0, 0.9),
+        -1px 1px 2px rgba(0, 0, 0, 0.9),
+        1px 1px 2px rgba(0, 0, 0, 0.9),
+        0 0 4px rgba(0, 0, 0, 0.95);
     max-width: 100%;
+    padding: 0.25rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0.125rem;
+}
+
+/* Наклоненная книга (бэкслеш \) */
+.book-backslash {
+    position: relative;
+    height: 8.5rem;
+    width: 2.2rem;
+    border-radius: 0.125rem;
+    box-shadow: 
+        0.25rem 0.5rem 1rem rgba(0, 0, 0, 0.5),
+        inset -0.125rem 0 0.25rem rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+    transform: rotate(-9deg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-origin: center;
+}
+
+.book-backslash:hover {
+    transform: rotate(0deg) translateY(-0.5rem) scale(1.25);
+    z-index: 100;
+
+    box-shadow: 
+        0.5rem 1rem 2rem rgba(0, 0, 0, 0.7),
+        inset -0.125rem 0 0.25rem rgba(255, 255, 255, 0.2);
+}
+
+.book-backslash .book-title {
+    font-size: 0.85rem;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: #FFFFFF;
+    text-shadow: 
+        -1px -1px 2px rgba(0, 0, 0, 0.9),
+        1px -1px 2px rgba(0, 0, 0, 0.9),
+        -1px 1px 2px rgba(0, 0, 0, 0.9),
+        1px 1px 2px rgba(0, 0, 0, 0.9),
+        0 0 4px rgba(0, 0, 0, 0.95);
+    max-width: 100%;
+    padding: 0.25rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0.125rem;
+}
+
+/* Исправленный блок для ссылок-книг */
+.book-link {
+    display: contents; /* Это убирает влияние ссылки на верстку, оставляя её кликабельной */
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+/* Дополнительно: чтобы при наведении вся книга реагировала */
+.book-link:hover {
+    text-decoration: none;
+}
+
+/* Пустое место */
+.book-empty {
+    width: 2.5rem;
+    height: 0;
+    margin-right: 0.5rem;
+}
+
+/* Стили книг по названиям */
+.book-undertale {
+    background-color: #000000;
+    background-image: url('../media/books/undertale.png');
+}
+
+.book-deltarune {
+    background-color: #000000;
+    background-image: url('../media/books/deltarune.png');
+}
+
+.book-roblox {
+    background-color: #FFFFFF;
+    background-image: url('../media/books/roblox.png');
+}
+
+.book-mario {
+    background-color: #D4A500;
+    background-image: url('../media/books/mario.png');
+}
+
+.book-zelda {
+    background-color: #7CB342;
+    background-image: url('../media/books/zelda.png');
+}
+
+.book-fnaf {
+    background-color: #8B6BA8;
+    background-image: url('../media/books/fnaf.png');
+}
+
+.book-resident-evil {
+    background-color: #8B6B47;
+    background-image: url('../media/books/resident_evil.png');
+}
+
+.book-unnamed {
+    background: linear-gradient(135deg, #4A5F7F 0%, #2A3F5F 100%);
+}
+
+/* Паутинки */
+.cobweb {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    opacity: 0;
+    color: rgba(200, 200, 200, 0.5);
+    z-index: 10;
+    background-image: url('../media/books/cobweb.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cobweb.spider {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: none;
+    animation: cobwebSway 4s ease-in-out infinite;
+    font-size: 1.5rem;
+}
+
+/* Паутинки в зависимости от количества книг */
+.bookshelf-shelf[data-book-count="0"] .cobweb,
+.bookshelf-shelf[data-book-count="1"] .cobweb,
+.bookshelf-shelf[data-book-count="2"] .cobweb {
+    opacity: 0.6;
+}
+
+.cobweb-top-left {
+    top: 0.5rem;
+    left: 0.5rem;
+    transform: rotate(-90deg);
+}
+
+.cobweb-top-right {
+    top: 0.5rem;
+    right: 0.5rem;
+    transform: rotate(0deg);
+}
+
+.cobweb-bottom-left {
+    bottom: 0.25rem;
+    left: 0.5rem;
+    transform: rotate(180deg);
+}
+
+.cobweb-bottom-right {
+    bottom: 0.25rem;
+    right: 0.5rem;
+    transform: rotate(90deg);
+}
+
+/* Позиционирование паучков рядом с паутинками */
+.cobweb.spider.cobweb-top-left {
+    top: 1.5rem;
+    left: 1rem;
+}
+
+.cobweb.spider.cobweb-top-right {
+    top: 1.5rem;
+    right: 1rem;
+}
+
+.cobweb.spider.cobweb-bottom-left {
+    bottom: 0.5rem;
+    left: 1rem;
+}
+
+.cobweb.spider.cobweb-bottom-right {
+    bottom: 0.5rem;
+    right: 1rem;
+}
+
+@keyframes cobwebSway {
+    0%, 100% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(2px) translateY(-2px);
+    }
+    50% {
+        transform: translateX(0) translateY(0);
+    }
+    75% {
+        transform: translateX(-2px) translateY(2px);
+    }
+}
+
+@media (max-width: 768px) {
+    .bookshelf-section {
+        min-height: 50rem;
+    }
+
+    .book-vertical,
+    .book-slash,
+    .book-backslash {
+        height: 6rem;
+        width: 1.8rem;
+    }
+
+    .book-horizontal {
+        height: 1.8rem;
+        width: 6rem;
+    }
+
+    .book-horizontal-stack {
+        height: 5.4rem;
+        width: 6rem;
+    }
+}
+
+/* contacts falling emojis*/
+
+.floating-phone,
+.floating-letter {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.45;
+    font-weight: bold;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    color: rgba(191, 204, 0, 0.7);
+}
+
+/* Первая телефонная трубка */
+.floating-icons .floating-phone:nth-child(1) {
+    animation: float-down-left 8s linear infinite -3.5s;
+    right: 30%;
+}
+
+/* Первое письмо */
+.floating-icons .floating-letter:nth-child(2) {
+    animation: float-down-right 7s linear infinite -2.8s;
+    right: 20%;
+}
+
+/* Вторая телефонная трубка */
+.floating-icons .floating-phone:nth-child(3) {
+    animation: float-down-center-left 9s linear infinite -4.5s;
+    left: 35%;
+}
+
+/* Второе письмо */
+.floating-icons .floating-letter:nth-child(4) {
+    animation: float-down-right 8s linear infinite -2s;
+    left: 10%;
+}
+
+/* Третья телефонная трубка */
+.floating-icons .floating-phone:nth-child(5) {
+    animation: float-down-left 7.5s linear infinite -4s;
+    right: 7%;
+}
+
+/* Третье письмо */
+.floating-icons .floating-letter:nth-child(6) {
+    animation: float-down-center-right 9.5s linear infinite -3.8s;
+    left: 50%;
+}
+
+@keyframes float-down-left {
+    0% {
+        transform: translateY(-50px) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.45;
+    }
+    95% {
+        opacity: 0.45;
     }
     100% {
-        background-position: 28.28px 28.28px;
+        transform: translateY(250px) translateX(-30px) rotate(360deg);
+        opacity: 0;
     }
 }
 
+<<<<<<< Updated upstream
 header h1 {
     text-align: center;
     text-transform: uppercase;
@@ -450,3 +1001,55 @@ a:hover {
 .dropdown-item:hover::before {
     width: 8px;
 }
+=======
+@keyframes float-down-right {
+    0% {
+        transform: translateY(-50px) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.45;
+    }
+    95% {
+        opacity: 0.45;
+    }
+    100% {
+        transform: translateY(250px) translateX(30px) rotate(-360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes float-down-center-left {
+    0% {
+        transform: translateY(-50px) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.45;
+    }
+    95% {
+        opacity: 0.45;
+    }
+    100% {
+        transform: translateY(250px) translateX(-40px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes float-down-center-right {
+    0% {
+        transform: translateY(-50px) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.45;
+    }
+    95% {
+        opacity: 0.45;
+    }
+    100% {
+        transform: translateY(250px) translateX(40px) rotate(-360deg);
+        opacity: 0;
+    }
+}
+>>>>>>> Stashed changes
