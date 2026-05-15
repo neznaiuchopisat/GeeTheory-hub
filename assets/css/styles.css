@@ -22,6 +22,14 @@ body {
     padding: 0;
 }
 
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    background: transparent !important; /* Прави го прозрачен */
+    display: none !important;
+}
+
 .page-wrapper {
     max-width: 75rem;
     margin: 0 auto;
@@ -166,15 +174,15 @@ table {
     gap: 0.8vw;
     animation: navbarGlow 3s ease-in-out infinite;
     transition: all 0.5s ease;
-    padding: 0.5vw 1.5vw;
+    padding: 0.5vw 1.5vw !important;
 }
 
 .navbar .container-fluid {
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
-    gap: 0.8vw;
-    width: 100%;
+    gap: 0.8vw !important;
+    width: 100% !important;
 }
 
 .navbar-nav {
@@ -194,8 +202,8 @@ table {
     display: flex !important;
     gap: 0.5vw !important;
     margin-left: 1.5vw !important;
-    max-width: 25vw;
-    min-width: 150px;
+    max-width: 25vw !important;
+    min-width: 150px !important;
 }
 
 .navbar .d-flex .form-control,
@@ -534,6 +542,11 @@ footer p {
 
 .books-page .navbar-brand {
     color: #4A9FDD !important;
+}
+
+.books-page .navbar-brand:hover {
+    color: #FFFFFF !important;
+    animation: brandPulse 2.5s ease-in-out infinite;
 }
 
 .books-page .nav-link {
@@ -1033,6 +1046,11 @@ footer p {
     color: #FC8181 !important;
 }
 
+.popular-page .navbar-brand:hover {
+    color: #FFFFFF !important;
+    animation: brandPulse 2.5s ease-in-out infinite;
+}
+
 .popular-page .nav-link {
     color: #F56565 !important;
 }
@@ -1173,7 +1191,7 @@ footer p {
 }
 
 .random-page .navbar {
-    background-color: rgba(60, 47, 16, 0.92) !important;
+    background-color: #1a1209 !important;
     position: relative;
     z-index: 2;
 }
@@ -1183,6 +1201,11 @@ footer p {
 .random-page .btn-outline-success {
     color: #f7c948 !important;
     border-color: #f7c948 !important;
+}
+
+.random-page .navbar-brand:hover {
+    color: #FFFFFF !important;
+    animation: brandPulse 2.5s ease-in-out infinite;
 }
 
 .random-page .btn-outline-success:focus,
@@ -1364,14 +1387,47 @@ footer p {
     line-height: 1.8;
 }
 
-.about-page ul{
+.about-page .ul-card{
 
     color: #9cffa1e1 !important;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.8;
-    list-style-type: '✨ ';
     padding-left: 20px;
 
+}
+
+.about-page .container {
+    background-color: #0d4110e1 !important;
+    border: 2px solid #42b348;
+    border-radius: 15px;
+    
+    /* ТОВА ПРАВИ МАГИЯТА */
+    max-width: 100% !important; /* Контейнерът заема почти целия екран */
+    width: 100% !important;
+    padding: 30px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about-page .about-card p, 
+.about-page .about-card li,
+.about-page .h-100 p, 
+.about-page .h-100 li {
+    font-size: 1.25rem !important; /* Увеличава текста с около 15% */
+    line-height: 1.6;    /* Добавя малко разстояние между редовете за четливост */
+}
+
+.about-page .about-card p:hover, 
+.about-page .about-card li:hover,
+.about-page .h-100 p:hover, 
+.about-page .h-100 li:hover {
+    border-color: #7ec480;
+    transform: translateY(-0.125rem);
+}
+
+.about-page .about-card h2, 
+.about-page .h-100 h3 {
+    font-size: 2rem;    /* Увеличава подзаглавията "Привет", "Визия" и "Мисия" */
 }
 
 .about-header {
@@ -1500,17 +1556,20 @@ footer p {
     font-weight: bold !important;
     text-align: center;
     text-shadow: 0 0 1.5rem rgba(116, 183, 118, 0.514);
-    position: relative;
 }
 
 .about-page .navbar {
     background-color: #2E7D32 !important;
-    position: relative;
     z-index: 10;
 }
 
 .about-page .navbar-brand {
     color: #81C784 !important;
+}
+
+.about-page .navbar-brand:hover {
+    color: #FFFFFF !important;
+    animation: brandPulse 2.5s ease-in-out infinite;
 }
 
 .about-page .nav-link {
@@ -1519,7 +1578,7 @@ footer p {
 
 .about-page .nav-link:hover {
     color: #FFFFFF !important;
-    border-bottom: 2px solid #81C784;
+    border-bottom: 2px solid #81C784 !important;
 }
 
 .about-page .btn-outline-success:focus,
@@ -1757,6 +1816,11 @@ footer p {
 .contact-page .nav-link,
 .contact-page .btn-outline-success {
     color: #b1d874 !important;
+}
+
+.contact-page .navbar-brand:hover {
+    color: #FFFFFF !important;
+    animation: brandPulse 2.5s ease-in-out infinite;
 }
 
 .contact-page .nav-link:hover {
