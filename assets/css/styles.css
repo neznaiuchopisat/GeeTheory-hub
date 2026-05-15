@@ -1107,6 +1107,13 @@ footer p {
     color: #f8e1a0;
 }
 
+.random-page .page-wrapper .container.text-center {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important; /* Убираем лишние отступы, если они мешают */
+}
+
 .random-header {
     border-bottom: 0.1875rem solid #f7c948 !important;
     margin-bottom: 1.25rem;
@@ -1201,6 +1208,49 @@ footer p {
     border-bottom: 3px solid #f7c948 !important;
 }
 
+.random-page .theory-display-card {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 40px;
+    background: rgb(95, 78, 13) !important; /* Или любой твой цвет из палитры */
+    border: 3px solid #f7c948 !important; /* Стандартная серая рамка, которая будет перекрыта при генерации */
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+
+/* Важно: заставляем всё внутри контента наследовать цвет */
+.random-page #theory-description * {
+    color: inherit !important;
+}
+
+/* Золотой заголовок как на скрине */
+.random-page .page-title-gold {
+    color: #FFD700 !important; 
+    font-family: 'Gabriela', serif;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* 2. Кнопка в твоей палитре (синяя или золотая) */
+.random-page .magic-button {
+    background-color: #91833c !important; /* Твой синий */
+    color: white !important;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.random-page .magic-button:hover {
+    background-color: transparent;
+    border-color: #FFD700 !important;
+    color: #FFD700;
+    transform: scale(1.05);
+}
+
+
 .random-page .empty-state {
     display: flex;
     flex-direction: column;
@@ -1294,6 +1344,34 @@ footer p {
 
 .about-page {
     background-color: #1B5E20;
+}
+
+.about-page p {
+    color: #9cffa1 !important;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.8;
+}
+
+.about-page h2 {
+    color: #5fff67b9 !important;
+    font-family: 'Gabriela', serif, bold;
+    line-height: 1.8;
+}
+
+.about-page h3 {
+    color: #45f94eb3 !important;
+    font-family: 'Gabriela', serif, bold;
+    line-height: 1.8;
+}
+
+.about-page ul{
+
+    color: #9cffa1e1 !important;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.8;
+    list-style-type: '✨ ';
+    padding-left: 20px;
+
 }
 
 .about-header {
@@ -1418,7 +1496,7 @@ footer p {
 }
 
 .about-page h1 {
-    color: #81C784 !important;
+    color: #38ad3e !important;
     font-weight: bold !important;
     text-align: center;
     text-shadow: 0 0 1.5rem rgba(116, 183, 118, 0.514);
@@ -1463,7 +1541,7 @@ footer p {
 }
 
 .about-page .nav-link.active {
-    color: #81C784 !important;
+    color: #A5D6A7 !important;
     border-bottom: 3px solid #81C784 !important;
 }
 
@@ -1685,6 +1763,8 @@ footer p {
     color: #ffffff !important;
     border-bottom: 2px solid #BFCC00;
 }
+
+
 
 .contact-page .btn-outline-success {
     color: #BFCC00 !important;

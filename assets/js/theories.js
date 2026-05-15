@@ -28,3 +28,31 @@ const theoriesData = {
         icon: "../assets/media/books/zelda.png"
     }
 };
+
+function showRandomTheory() {
+    // 1. Получаем список всех ключей (fnaf, roblox, undertale и т.д.)
+    const keys = Object.keys(theoriesData);
+    
+    // 2. Выбираем случайный ключ
+    const randomKey = keys[Math.floor(Math.random() * keys.length)];
+    
+    // 3. Берем данные по этому ключу
+    const theory = theoriesData[randomKey];
+    
+    // 4. Находим элементы на странице
+    const card = document.getElementById('theory-card');
+    const content = document.getElementById('theory-content');
+    
+    // 5. Применяем оформление из объекта
+    card.style.borderColor = theory.borderColor;
+    card.style.backgroundColor = theory.accentColor + "22"; // Добавляем прозрачность к цвету фона
+    
+    // 6. Выводим контент (иконка + заголовок + текст)
+    content.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+            <img src="${theory.icon}" alt="icon" style="width: 50px; height: 50px; border-radius: 5px;">
+            <h2 style="margin: 0; color: ${theory.borderColor}">${theory.title}</h2>
+        </div>
+        <div>${theory.content}</div>
+    `;
+}
