@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Unified CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Популарни Обсъждания</title>
+</head>
+
+<body class="discussions-page">
+
+    <header class="discussions-header">
+        <img src="https://universidadeuropea.com/resources/media/images/rsz_1game_theory.original.jpg" alt="Logo of my brand">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">GTheory</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Започни своето приключение</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/books.html">Книги от теории</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="discussions.html">Популарни обсъждания</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="random-theory.html">Случайна теория</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">За нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Контакти</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Запрос..." aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">Търси</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <hr>
+    </header>
+
+    <div class="page-wrapper">
+        <h1 align="center">Популарни Обсъждания</h1>
+        <p class="section-subtitle">Споделяй своите теории и мнения със съобществото</p>
+
+        <!-- CREATE DISCUSSION BUTTON -->
+        <div class="create-discussion-container">
+            <button class="btn-create-discussion" onclick="toggleCreateForm()">
+                ➕ Създай нова дискусия
+            </button>
+        </div>
+
+        <!-- CREATE DISCUSSION FORM -->
+        <div id="createForm" class="create-form hidden">
+            <div class="form-header">
+                <h2>Създай своята дискусия</h2>
+                <button class="close-btn" onclick="toggleCreateForm()">✕</button>
+            </div>
+            <form onsubmit="createDiscussion(event)">
+                <div class="form-group">
+                    <label for="titleInput">Заглавие на дискусията:</label>
+                    <input type="text" id="titleInput" placeholder="Напр. Най-добрия персонаж в FNAF" required>
+                </div>
+                <div class="form-group">
+                    <label for="contentInput">Твоето мнение:</label>
+                    <textarea id="contentInput" placeholder="Напиши подробно твоето мнение тук..." rows="6" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="gameInput">За коя игра е дискусията?</label>
+                    <select id="gameInput" required>
+                        <option value="">Избери игра...</option>
+                        <option value="fnaf">Five Nights at Freddy's</option>
+                        <option value="undertale">Undertale</option>
+                        <option value="deltarune">Deltarune</option>
+                        <option value="mario">Super Mario Bros</option>
+                        <option value="zelda">The Legend of Zelda</option>
+                        <option value="resident-evil">Resident Evil</option>
+                        <option value="roblox">Roblox</option>
+                        <option value="other">Друга игра</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Публикувай</button>
+                    <button type="button" class="btn-cancel" onclick="toggleCreateForm()">Отмени</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- DISCUSSIONS LIST -->
+        <div class="discussions-container" id="discussionsContainer">
+            <!-- Дискусиите ще се зареждат тук -->
+        </div>
+
+    </div>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 GeeTheory Hub. Всички права запазени.</p>
+    </footer>
+
+    <!-- REPLY MODAL -->
+    <div id="replyModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Отговори на дискусия</h2>
+                <button class="close-modal" onclick="closeReplyModal()">✕</button>
+            </div>
+            <form onsubmit="submitReply(event)">
+                <textarea id="replyText" placeholder="Напиши своя отговор..." rows="5" required></textarea>
+                <div class="modal-actions">
+                    <button type="submit" class="btn-submit">Отговори</button>
+                    <button type="button" class="btn-cancel" onclick="closeReplyModal()">Отмени</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../assets/js/discussions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

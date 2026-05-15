@@ -989,134 +989,6 @@ footer p {
 }
 
 /* ========================================
-   POPULAR PAGE STYLES (RED THEME)
-   ======================================== */
-
-.popular-page {
-    background-color: #2D0F0F;
-}
-
-.popular-header {
-    border-bottom: 0.1875rem solid #E53E3E !important;
-    margin-bottom: 1.25rem;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-    text-align: center;
-    position: relative;
-    background: 
-        linear-gradient(135deg, transparent 49%, rgba(255, 107, 107, 0.35) 49%, rgba(255, 107, 107, 0.35) 51%, transparent 51%),
-        linear-gradient(45deg, transparent 49%, rgba(255, 152, 72, 0.35) 49%, rgba(255, 152, 72, 0.35) 51%, transparent 51%),
-        linear-gradient(-135deg, transparent 49%, rgba(255, 107, 107, 0.3) 49%, rgba(255, 107, 107, 0.3) 51%, transparent 51%),
-        linear-gradient(-45deg, transparent 49%, rgba(255, 152, 72, 0.3) 49%, rgba(255, 152, 72, 0.3) 51%, transparent 51%);
-    background-size: 3.5rem 3.5rem;
-    background-position: 0 0, 0 0, 1.75rem 1.75rem, 1.75rem 1.75rem;
-    animation: trianglesShift 20s linear infinite;
-    width: 100%;
-}
-
-@keyframes trianglesShift {
-    0% {
-        background-position: 0 0, 0 0, 1.75rem 1.75rem, 1.75rem 1.75rem;
-    }
-    100% {
-        background-position: 3.5rem 3.5rem, 3.5rem 3.5rem, 5.25rem 5.25rem, 5.25rem 5.25rem;
-    }
-}
-
-.popular-header img {
-    display: block;
-    margin: 0 auto 1.25rem auto;
-    width: 6.25rem;
-    height: auto;
-    max-width: 100%;
-}
-
-.popular-page h1 {
-    color: #F56565 !important;
-    font-weight: bold !important;
-    text-align: center;
-    text-shadow: 0 0 1.5rem rgba(255, 107, 107, 0.3);
-}
-
-.popular-page .navbar {
-    background-color: #3D1515 !important;
-}
-
-.popular-page .navbar-brand {
-    color: #FC8181 !important;
-}
-
-.popular-page .navbar-brand:hover {
-    color: #FFFFFF !important;
-    animation: brandPulse 2.5s ease-in-out infinite;
-}
-
-.popular-page .nav-link {
-    color: #F56565 !important;
-}
-
-.popular-page .nav-link:hover {
-    color: #FFFFFF !important;
-    border-bottom: 2px solid #FC8181 !important;
-}
-
-.popular-page .btn-outline-success {
-    color: #FC8181 !important;
-    border-color: #F56565 !important;
-}
-
-.popular-page .btn-outline-success:hover {
-    background-color: #FC8181 !important;
-    color: #2D0F0F !important;
-}
-
-.popular-page .btn-outline-success:focus,
-.popular-page .btn-outline-success.active {
-    border-color: #E53E3E !important;
-    box-shadow: 0 0 0 0.25rem #9c4c4c !important;
-}
-
-.popular-page .nav-link.active {
-    color: #F56565 !important;
-    border-bottom: 3px solid #F56565 !important;
-}
-
-.popular-page .empty-state {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 30rem;
-    text-align: center;
-    margin: 5rem 0;
-}
-
-.popular-page .empty-state h2 {
-    color: #FC8181;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-}
-
-.popular-page .empty-state p {
-    color: #F56565;
-    font-size: 1.25rem;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.popular-page footer {
-    padding: 2rem 1.25rem;
-    margin-top: 3.75rem;
-    border-top: 0.125rem solid #6B2C2C;
-}
-
-.popular-page footer p {
-    color: #F56565;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0.625rem 0 0 0;
-}
-
-/* ========================================
    RANDOM THEORY PAGE STYLES (YELLOW THEME)
    ======================================== */
 
@@ -1995,7 +1867,7 @@ footer p {
         width: 6rem;
     }
 
-    .popular-page .empty-state,
+    .discussions-page .empty-state,
     .random-page .empty-state,
     .about-page .empty-state,
     .contact-page .empty-state {
@@ -2003,14 +1875,14 @@ footer p {
         margin: 3rem 0;
     }
 
-    .popular-page .empty-state h2,
+    .discussions-page .empty-state h2,
     .random-page .empty-state h2,
     .about-page .empty-state h2,
     .contact-page .empty-state h2 {
         font-size: 1.5rem;
     }
 
-    .popular-page .empty-state p,
+    .discussions-page .empty-state p,
     .random-page .empty-state p,
     .about-page .empty-state p,
     .contact-page .empty-state p {
@@ -2027,5 +1899,677 @@ footer p {
 
     .contact-header {
         min-height: 180px;
+    }
+
+    .section-subtitle {
+    text-align: center;
+    color: #7D74A7;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    }
+}
+
+/* ========================================
+   DISCUSSIONS PAGE STYLES (RED THEME)
+   ======================================== */
+
+.discussions-page {
+    background-color: #2D0F0F !important;
+}
+
+.discussions-page .discussions-header {
+    border-bottom: 0.1875rem solid #E53E3E !important;
+    margin-bottom: 1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    text-align: center;
+    position: relative;
+    background: 
+        linear-gradient(135deg, transparent 49%, rgba(255, 107, 107, 0.35) 49%, rgba(255, 107, 107, 0.35) 51%, transparent 51%),
+        linear-gradient(45deg, transparent 49%, rgba(255, 152, 72, 0.35) 49%, rgba(255, 152, 72, 0.35) 51%, transparent 51%),
+        linear-gradient(-135deg, transparent 49%, rgba(255, 107, 107, 0.3) 49%, rgba(255, 107, 107, 0.3) 51%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, rgba(255, 152, 72, 0.3) 49%, rgba(255, 152, 72, 0.3) 51%, transparent 51%);
+    background-size: 3.5rem 3.5rem;
+    background-position: 0 0, 0 0, 1.75rem 1.75rem, 1.75rem 1.75rem;
+    animation: trianglesShift 20s linear infinite;
+    width: 100%;
+}
+
+.discussions-page .discussions-header img {
+    display: block;
+    margin: 0 auto 1.25rem auto;
+    width: 6.25rem;
+    height: auto;
+    max-width: 100%;
+}
+
+@keyframes trianglesShift {
+    0% {
+        background-position: 0 0, 0 0, 1.75rem 1.75rem, 1.75rem 1.75rem;
+    }
+    100% {
+        background-position: 3.5rem 3.5rem, 3.5rem 3.5rem, 5.25rem 5.25rem, 5.25rem 5.25rem;
+    }
+}
+
+.discussions-page h1 {
+    color: #F56565 !important;
+    font-weight: bold !important;
+    text-align: center;
+    text-shadow: 0 0 1.5rem rgba(255, 107, 107, 0.3);
+}
+
+.discussions-page .navbar {
+    background-color: #3D1515 !important;
+}
+
+.discussions-page .navbar-brand {
+    color: #FC8181 !important;
+}
+
+.discussions-page .navbar-brand:hover {
+    color: #FFFFFF !important;
+    animation: brandPulse 2.5s ease-in-out infinite;
+}
+
+.discussions-page .nav-link {
+    color: #F56565 !important;
+}
+
+.discussions-page .nav-link:hover {
+    color: #FFFFFF !important;
+    border-bottom: 2px solid #FC8181 !important;
+}
+
+.discussions-page .nav-link.active {
+    color: #F56565 !important;
+    border-bottom: 3px solid #F56565 !important;
+}
+
+.discussions-page .btn-outline-success {
+    color: #FC8181 !important;
+    border-color: #F56565 !important;
+}
+
+.discussions-page .btn-outline-success:hover {
+    background-color: #FC8181 !important;
+    color: #2D0F0F !important;
+}
+
+.discussions-page .btn-outline-success:focus,
+.discussions-page .btn-outline-success.active {
+    border-color: #E53E3E !important;
+    box-shadow: 0 0 0 0.25rem #9c4c4c !important;
+}
+
+.discussions-page footer {
+    padding: 2rem 1.25rem;
+    margin-top: 3.75rem;
+    border-top: 0.125rem solid #6B2C2C !important;
+}
+
+.discussions-page footer p {
+    color: #F56565 !important;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0.625rem 0 0 0;
+}
+
+/* ========================================
+   SECTION SUBTITLE
+   ======================================== */
+
+.discussions-page .section-subtitle {
+    text-align: center;
+    color: #F56565 !important;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ========================================
+   CREATE DISCUSSION BUTTON
+   ======================================== */
+
+.discussions-page .create-discussion-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.discussions-page .btn-create-discussion {
+    background: linear-gradient(135deg, #F56565 0%, #E53E3E 100%) !important;
+    color: white !important;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.discussions-page .btn-create-discussion:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+    background: linear-gradient(135deg, #FC8181 0%, #F56565 100%) !important;
+}
+
+.discussions-page .btn-create-discussion:active {
+    transform: translateY(-1px);
+}
+
+/* ========================================
+   CREATE FORM
+   ======================================== */
+
+.discussions-page .create-form {
+    background-color: #3D1515;
+    border: 2px solid #E53E3E;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 700px;
+    box-shadow: 0 8px 32px rgba(229, 62, 62, 0.2);
+    animation: slideDown 0.4s ease;
+}
+
+.discussions-page .create-form.hidden {
+    display: none;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.discussions-page .form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.discussions-page .form-header h2 {
+    color: #F56565;
+    margin: 0;
+    font-family: 'Gabriela', serif;
+}
+
+.discussions-page .close-btn {
+    background: none;
+    border: none;
+    color: #F56565;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.discussions-page .close-btn:hover {
+    color: #FFFFFF;
+    transform: scale(1.2);
+}
+
+.discussions-page .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.discussions-page .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #F56565;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.discussions-page .form-group input,
+.discussions-page .form-group textarea,
+.discussions-page .form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #2D0F0F !important;
+    color: #FFFFFF !important;
+    border: 1px solid #6B2C2C !important;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.discussions-page .form-group input:focus,
+.discussions-page .form-group textarea:focus,
+.discussions-page .form-group select:focus {
+    outline: none;
+    border-color: #F56565 !important;
+    box-shadow: 0 0 0 3px rgba(245, 101, 101, 0.1);
+}
+
+.discussions-page .form-group textarea {
+    resize: vertical;
+}
+
+.discussions-page .form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+.discussions-page .btn-submit {
+    background: linear-gradient(135deg, #F56565 0%, #E53E3E 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.discussions-page .btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 101, 101, 0.4);
+}
+
+.discussions-page .btn-cancel {
+    background-color: #6B2C2C;
+    color: #F56565;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.discussions-page .btn-cancel:hover {
+    background-color: #8B3C3C;
+    color: #FFFFFF;
+}
+
+/* ========================================
+   DISCUSSIONS CONTAINER
+   ======================================== */
+
+.discussions-page .discussions-container {
+    margin: 2rem 0;
+}
+
+.discussions-page .empty-discussions {
+    text-align: center;
+    padding: 3rem;
+    color: #F56565;
+    font-size: 1.2rem;
+}
+
+/* ========================================
+   DISCUSSION CARD
+   ======================================== */
+
+.discussions-page .discussion-card {
+    background-color: #3D1515;
+    border: 1px solid #6B2C2C;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.4s ease;
+    box-shadow: 0 2px 8px rgba(229, 62, 62, 0.1);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.discussions-page .discussion-card:hover {
+    border-color: #E53E3E;
+    box-shadow: 0 4px 16px rgba(229, 62, 62, 0.2);
+    transform: translateY(-2px);
+}
+
+.discussions-page .discussion-header {
+    margin-bottom: 1rem;
+}
+
+.discussions-page .discussion-title-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.discussions-page .discussion-title {
+    color: #F56565;
+    margin: 0;
+    flex: 1;
+    min-width: 200px;
+    font-size: 1.3rem;
+    font-family: 'Gabriela', serif;
+}
+
+.discussions-page .game-tag {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-top: 0.25rem;
+    background-color: rgba(245, 101, 101, 0.15) !important;
+    border: 1px solid #E53E3E !important;
+    color: #FC8181 !important;
+}
+
+.discussions-page .discussion-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    color: #F56565;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.discussions-page .discussion-author {
+    font-weight: 600;
+    color: #FC8181;
+}
+
+.discussions-page .discussion-time {
+    color: #A85555;
+    font-style: italic;
+}
+
+.discussions-page .discussion-content {
+    color: #F56565;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* ========================================
+   DISCUSSION FOOTER & ACTIONS
+   ======================================== */
+
+.discussions-page .discussion-footer {
+    border-top: 1px solid #6B2C2C;
+    padding-top: 1rem;
+}
+
+.discussions-page .discussion-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.discussions-page .action-btn {
+    background-color: #2D0F0F;
+    color: #F56565;
+    border: 1px solid #6B2C2C;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.discussions-page .action-btn:hover {
+    background-color: #4D1515;
+    border-color: #E53E3E;
+    transform: translateY(-2px);
+}
+
+.discussions-page .action-btn.active {
+    background-color: #E53E3E;
+    color: #FFFFFF;
+    border-color: #E53E3E;
+}
+
+.discussions-page .like-btn.active,
+.discussions-page .dislike-btn.active {
+    animation: pulse 0.5s ease;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* ========================================
+   REPLIES SECTION
+   ======================================== */
+
+.discussions-page .replies-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #6B2C2C;
+}
+
+.discussions-page .reply-card {
+    background-color: #2D0F0F;
+    border-left: 3px solid #E53E3E;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.discussions-page .reply-card:hover {
+    border-left-color: #FFFFFF;
+    background-color: #4D1515;
+}
+
+.discussions-page .reply-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.discussions-page .reply-author {
+    color: #FC8181;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.discussions-page .reply-time {
+    color: #A85555;
+    font-size: 0.85rem;
+}
+
+.discussions-page .reply-content {
+    color: #F56565;
+    margin-bottom: 0.75rem;
+    font-family: 'Montserrat', sans-serif;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.discussions-page .reply-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.discussions-page .reply-action-btn {
+    background-color: transparent;
+    color: #F56565;
+    border: 1px solid #6B2C2C;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.discussions-page .reply-action-btn:hover {
+    color: #E53E3E;
+    border-color: #E53E3E;
+}
+
+.discussions-page .reply-action-btn.active {
+    background-color: #E53E3E;
+    color: #FFFFFF;
+    border-color: #E53E3E;
+}
+
+/* ========================================
+   REPLY MODAL
+   ======================================== */
+
+.discussions-page .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.discussions-page .modal.hidden {
+    display: none;
+}
+
+.discussions-page .modal-content {
+    background-color: #3D1515;
+    border: 2px solid #E53E3E;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    animation: slideDown 0.4s ease;
+}
+
+.discussions-page .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.discussions-page .modal-header h2 {
+    color: #F56565;
+    margin: 0;
+    font-family: 'Gabriela', serif;
+}
+
+.discussions-page .close-modal {
+    background: none;
+    border: none;
+    color: #F56565;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.discussions-page .close-modal:hover {
+    color: #FFFFFF;
+    transform: scale(1.2);
+}
+
+.discussions-page .modal-content textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #2D0F0F;
+    color: #FFFFFF;
+    border: 1px solid #6B2C2C;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    resize: vertical;
+    transition: all 0.3s ease;
+}
+
+.discussions-page .modal-content textarea:focus {
+    outline: none;
+    border-color: #F56565;
+    box-shadow: 0 0 0 3px rgba(245, 101, 101, 0.1);
+}
+
+.discussions-page .modal-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    .discussions-page .discussion-card {
+        padding: 1rem;
+    }
+
+    .discussions-page .discussion-title {
+        font-size: 1.1rem;
+    }
+
+    .discussions-page .discussion-title-section {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .discussions-page .game-tag {
+        align-self: flex-start;
+    }
+
+    .discussions-page .discussion-actions {
+        flex-direction: column;
+    }
+
+    .discussions-page .action-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .discussions-page .form-actions {
+        flex-direction: column;
+    }
+
+    .discussions-page .btn-submit,
+    .discussions-page .btn-cancel {
+        width: 100%;
+    }
+
+    .discussions-page .modal-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .discussions-page .reply-header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
