@@ -595,7 +595,7 @@ footer p {
     max-width: 90rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 0.5rem;
 }
 
 .bookshelf-shelf {
@@ -800,7 +800,7 @@ footer p {
     text-align: center;
     flex-shrink: 0;
     margin-right: 0.5rem;
-    transform: rotate(-9deg);
+    transform: rotate(-7deg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
