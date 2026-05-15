@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Unified CSS -->
     <link rel="stylesheet" href="../assets/css/styles.css">
     <title>Контакти</title>
 </head>
@@ -26,7 +25,7 @@
             <span class="floating-letter">✉</span>
         </div>
         <img src="https://universidadeuropea.com/resources/media/images/rsz_1game_theory.original.jpg" alt="Logo of my brand">
-        <nav class="navbar navbar-expand-lg bg-transparent">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.html">GTheory</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -40,10 +39,10 @@
                             <a class="nav-link" href="../index.html">Започни своето приключение</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="books.html">Книги от теории</a>
+                            <a class="nav-link" href="../pages/books.html">Книги от теории</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="popular.html">Популарни обсъждания</a>
+                            <a class="nav-link" href="../pages/popular.html">Популарни обсъждания</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="random-theory.html">Случайна теория</a>
@@ -65,18 +64,39 @@
     </header>
 
     <div class="page-wrapper">
-        <h1 align="center">Контакти</h1>
+        <div class="container shadow-lg">
+            <h1 class="text-center mb-5" style="font-family: 'Gabriela', serif; color: #ddf060;">Контакти</h1>
+            <img src="../assets/media/contacts/contact.png" alt="Contact Illustration" class="contact-illustration">
 
-        <div class="empty-state">
-            <h2>Страницата скоро ще е готова</h2>
-            <p>Тука ще намерите информация за контакти.</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-5">
+                    <div class="contact-card">
+                        <h3>✉ Имейл адрес</h3>
+                        <p>Имате въпроси или искате да работим заедно? Пишете ми на:</p>
+                        <a href="mailto:example@email.com" class="contact-link">example@email.com</a>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="contact-card">
+                        <h3>🌐 Социални мрежи</h3>
+                        <p>Последвайте приключението и в другите платформи:</p>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/makushimu_sama/" target="_blank">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <footer>
+    <footer class="text-center py-4">
+        <hr style="border-color: #ddf060; width: 80%; margin: 20px auto;">
         <p>&copy; 2026 GeeTheory Hub. Всички права запазени.</p>
     </footer>
 
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+</body>
 </html>

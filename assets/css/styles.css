@@ -1643,37 +1643,118 @@ footer p {
    CONTACT PAGE STYLES (SALAD THEME)
    ======================================== */
 
+/* Основной фон — глубокий грязно-зеленый */
 .contact-page {
-    background-color: #2D3D16;
-    color: #E8F5D8;
+    background-color: #1a1d0f !important; 
+    color: #d1d4bc;
+    min-height: 100vh;
 }
 
+.contact-page p {
+    color: #d1d4bc !important;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.8;
+}
+
+.contact-page a {
+    color: #dff35f !important;
+}
+
+/* Хедер с градиентом "мутной воды" */
 .contact-header {
-    border-bottom: 0.1875rem solid #BFCC00 !important;
-    margin-bottom: 1.25rem;
-    padding-top: 1.25rem;
-    padding-bottom: 3.3rem;
+    border-bottom: 3px solid #8a9138 !important; /* Грязный желто-зеленый */
+    padding-bottom: 2rem;
     text-align: center;
     position: relative;
     width: 100%;
     overflow: hidden;
-    background: linear-gradient(180deg, rgba(191, 204, 0, 0.18), rgba(217, 235, 154, 0.18)) !important;
+    background: linear-gradient(180deg, rgba(138, 145, 56, 0.15), transparent) !important;
 }
 
-
+/* Линии в хедере под цвет старой горчицы */
 .contact-header::before {
-
     content: '';
     position: absolute;
     inset: 0;
     z-index: 1;
-    /* Рисуем одну линию и размножаем её */
     background-image: linear-gradient(90deg, 
-        rgba(191, 204, 0, 0.3) 0px, 
-        rgba(191, 204, 0, 0.3) 2px, 
+        rgba(138, 145, 56, 0.2) 0px, 
+        rgba(138, 145, 56, 0.2) 2px, 
         transparent 2px);
-    background-size: calc(100% / 7) 100%; /* Делим ровно на 7 секций */
+    background-size: calc(100% / 7) 100%;
     pointer-events: none;
+}
+
+/* Главный контейнер */
+.contact-page .container {
+    background-color: rgba(40, 45, 20, 0.6) !important; /* Глухой темный хаки */
+    border: 2px solid #6b7031 !important;
+    border-radius: 20px;
+    max-width: 95% !important; 
+    padding: 40px;
+    margin-top: 30px;
+}
+
+/* Карточки контактов */
+.contact-card {
+    background: rgba(255, 255, 230, 0.03) !important; /* Едва заметный теплый отсвет */
+    border: 1px solid rgba(138, 145, 56, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    text-align: center;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    border-color: #afb42b !important; /* Более яркий, но все еще грязный желтый */
+    background: rgba(138, 145, 56, 0.1) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.contact-card h3 {
+    font-family: 'Gabriela', serif;
+    color: #afb42b !important; /* Цвет тусклого золота */
+    margin-bottom: 20px;
+}
+
+/* Текст и ссылки */
+.contact-link {
+    color: #cddc39 !important; /* Грязно-лаймовый */
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+    color: #f4ff81 !important; /* Бледный желтый при наведении */
+    text-shadow: 0 0 8px rgba(205, 220, 57, 0.5);
+}
+
+/* Иллюстрация с мягким свечением */
+.contact-illustration {
+    display: block;
+    margin: 0 auto 40px;
+    max-width: 380px;
+    width: 100%;
+    filter: sepia(0.5) hue-rotate(20deg) drop-shadow(0 0 20px rgba(107, 112, 49, 0.4));
+    animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Навбар — убираем ярко-зеленый */
+.contact-page .navbar-brand, 
+.contact-page .nav-link {
+    color: #afb42b !important;
+}
+
+.contact-page .nav-link.active {
+    border-bottom: 2px solid #afb42b;
 }
 
 /* FLOATING ICONS */
@@ -1807,7 +1888,7 @@ footer p {
 }
 
 .contact-page .navbar {
-    background-color: rgba(54, 70, 24, 0.92) !important;
+    background-color: rgba(65, 75, 19, 0.92) !important;
     position: relative;
     z-index: 2;
 }
