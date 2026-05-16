@@ -260,28 +260,6 @@ a:hover {
     height: 100%;
 }
 
-.navbar .d-flex {
-    flex: 0 1 auto !important;
-    min-width: 160px !important;
-    display: flex !important;
-    gap: 0.5vw !important;
-    margin-left: 1.5vw !important;
-    max-width: 25vw !important;
-    min-width: 150px !important;
-}
-
-.navbar .d-flex .form-control,
-.navbar .d-flex .btn {
-    font-size: clamp(12px, 0.9vw, 18px) !important;
-}
-
-.navbar .container-fluid,
-.navbar-nav,
-.navbar .d-flex {
-    align-items: center !important;
-    display: flex !important;
-}
-
 .nav-link,
 .btn,
 .navbar-brand {
@@ -289,15 +267,6 @@ a:hover {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-}
-
-.navbar-nav .nav-item,
-.navbar-nav .nav-link,
-.navbar .d-flex .btn,
-.navbar .d-flex .form-control {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    height: auto;
 }
 
 .navbar-brand {
@@ -778,7 +747,6 @@ footer p {
     color: #4A9FDD !important;
     border-bottom: 3px solid #4A9FDD !important;
 }
-
 /* BOOKSHELF SECTION */
 
 .bookshelf-section {
@@ -786,7 +754,7 @@ footer p {
     justify-content: center;
     align-items: center;
     min-height: 70rem;
-    margin: 2.5rem 0;
+    margin: 0.01rem 0 !important;
     padding: 2.5rem 0;
 }
 
