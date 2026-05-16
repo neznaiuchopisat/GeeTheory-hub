@@ -241,6 +241,10 @@ a:hover {
     padding: 0.5vw 1.5vw !important;
 }
 
+.navbar-toggler {
+    color: #ffffff;
+}
+
 .navbar .container-fluid {
     display: flex !important;
     justify-content: space-between !important;
