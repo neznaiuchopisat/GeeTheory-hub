@@ -49,6 +49,8 @@ h1 {
 
 h3 {
     color: #816FD1;
+    padding-top: 0.5rem !important;
+    font-size: 1.75rem !important;
 }
 
 h4 {
@@ -117,15 +119,15 @@ a:hover {
    TABLE STYLES
    ======================================== */
 
-table {
-    color: #816FD1;
-    font-family: 'Montserrat', sans-serif;
-}
 
 .contrast-table {
     background-color: #1C1633 !important;
     color: #816FD1 !important;
     border-color: #423F52 !important;
+}
+
+.table {
+    --bs-table-bg: #241837 !important;
 }
 
 .contrast-table th,
@@ -135,29 +137,9 @@ table {
     padding: 0.75rem 0.5rem !important;
 }
 
-.contrast-table thead {
-    background-color: #423F52 !important;
-    color: #FFFFFF !important;
-}
-
 .contrast-table thead th {
-    color: #FFFFFF !important;
+    color: #9058c8 !important;
     font-weight: 600 !important;
-}
-
-.contrast-table tfoot {
-    background-color: #423F52 !important;
-    color: #FFFFFF !important;
-}
-
-.contrast-table tbody tr {
-    background-color: #1C1633 !important;
-    color: #816FD1 !important;
-}
-
-.contrast-table tbody tr:nth-child(even) {
-    background-color: #221F33 !important;
-    color: #816FD1 !important;
 }
 
 /* ========================================
@@ -382,7 +364,7 @@ main {
 }
 
 .container {
-    background-color: #221F33;
+    background-color: #191627;
     border: 0.125rem solid #423F52;
     border-radius: 0.5rem;
     padding: 1.25rem;
@@ -482,6 +464,139 @@ footer p {
 .nav-link.active {
     color: #816FD1 !important;
     border-bottom: 3px solid #816FD1 !important;
+}
+
+/* ==========================================================================
+    НОВЫЕ СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ (Скопируй их в свой основной styles.css)
+    ========================================================================== */
+
+/* Общие контейнеры для новых секций на главной */
+.main-section-box {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.main-section-title {
+    font-family: 'Gabriela', serif;
+    color: #816FD1;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* 2. Стиль для блока "Научись делать теории сам" */
+.academy-purple-card {
+    background-color: #221F33;
+    border: 2px dashed #816FD1; /* Пунктирная рамка для крафтового стиля */
+    border-radius: 15px;
+    padding: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.academy-purple-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(129, 111, 209, 0.15);
+}
+.academy-purple-card p {
+    color: #7D74A7;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* 3. Стили для карточек библиотеки (Книги, Факты, Тайны) */
+.library-feature-card {
+    background-color: #1C1633;
+    border: 1px solid #423F52;
+    border-radius: 12px;
+    padding: 1.5rem;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+.library-feature-card:hover {
+    border-color: #816FD1;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(129, 111, 209, 0.1);
+}
+.library-card-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: #221F33; /* Заглушка фона, если картинка грузится */
+}
+.library-feature-card h4 {
+    color: #816FD1;
+    font-family: 'Gabriela', serif;
+    margin-bottom: 0.75rem;
+}
+.library-feature-card p {
+    font-size: 0.95rem;
+    color: #7D74A7;
+}
+
+/* 4. Стили для витрины сувениров (Мерч без цен) */
+.souvenir-showcase-card {
+    background-color: #221F33;
+    border: 1px solid #423F52;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+.souvenir-showcase-card:hover {
+    border-color: #816FD1;
+    background-color: #1C1633;
+}
+.souvenir-img-wrapper {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: #1C1633;
+}
+.souvenir-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.souvenir-showcase-card:hover .souvenir-img-wrapper img {
+    transform: scale(1.05); /* Легкий зум картинки при наведении */
+}
+.souvenir-title {
+    color: #7D74A7;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* 5. Стиль для секции призыва к действию (CTA) "Стань теоретиком" */
+.cta-theorist-box {
+    background: linear-gradient(180deg, #1C1633 0%, #221F33 100%);
+    border: 1px solid #423F52;
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+.btn-purple-cta {
+    background-color: #816FD1;
+    color: #FFFFFF !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(129, 111, 209, 0.3);
+    margin-top: 1rem;
+}
+.btn-purple-cta:hover {
+    background-color: #FFFFFF;
+    color: #221F33 !important;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
 }
 
 /* ========================================
