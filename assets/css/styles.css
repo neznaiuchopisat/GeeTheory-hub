@@ -1736,7 +1736,7 @@ footer p {
 /* Хедер с градиентом "мутной воды" */
 .contact-header {
     border-bottom: 3px solid #8a9138 !important; /* Грязный желто-зеленый */
-    padding-bottom: 2rem;
+    padding-bottom: 3.3rem;
     text-align: center;
     position: relative;
     width: 100%;
