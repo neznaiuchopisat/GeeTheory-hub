@@ -254,14 +254,14 @@ a:hover {
 
 /* 2. Меняем цвет рамки вокруг этих линий, чтобы она сочеталась */
 .navbar-toggler {
-    border-color: #8a77e0 !important; /* Делаем рамку фиолетовой */
+    border-color: #FFFFFF !important; /* Делаем рамку фиолетовой */
     /* Если тебе вообще не нужна рамка вокруг линий, раскомментируй строку ниже: */
     /* border: none !important; */
 }
 
 /* 3. Опционально: меняем цвет свечения (тени) при нажатии на кнопку на Android */
 .navbar-toggler:focus {
-    box-shadow: 0 0 0 0.25rem rgba(138, 119, 224, 0.25) !important; /* Неоновое фиолетовое свечение */
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25) !important; /* Неоновое фиолетовое свечение */
 }
 
 .navbar .container-fluid {
