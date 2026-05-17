@@ -1,2 +1,0 @@
-# GeeTheory-hub
-uni proj
