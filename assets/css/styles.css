@@ -829,6 +829,7 @@ footer p {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: 11;
 }
 
 .book-vertical:hover {
@@ -855,6 +856,7 @@ footer p {
     padding: 0.25rem;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 0.125rem;
+    z-index: 11;
 }
 
 /* HORIZONTAL BOOK */
@@ -878,6 +880,7 @@ footer p {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: 11;
 }
 
 .book-horizontal:hover {
@@ -903,6 +906,7 @@ footer p {
     padding: 0.2rem 0.4rem;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 0.125rem;
+    z-index: 11;
 }
 
 /* HORIZONTAL STACKS */
@@ -923,6 +927,7 @@ footer p {
     margin-right: 0;
     margin-bottom: 0;
     width: 100%;
+    z-index: 11;
 }
 
 /* SLASH BOOK */
@@ -947,6 +952,7 @@ footer p {
     background-position: center;
     background-repeat: no-repeat;
     transform-origin: center;
+    z-index: 11;
 }
 
 .book-slash:hover {
@@ -997,6 +1003,7 @@ footer p {
     background-position: center;
     background-repeat: no-repeat;
     transform-origin: center;
+    z-index: 11;
 }
 
 .book-backslash:hover {
@@ -1093,6 +1100,7 @@ footer p {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: 10;
 }
 
 .cobweb.spider {
